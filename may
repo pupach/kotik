@@ -1,0 +1,72 @@
+#include <TXLib.h>  // И все, и все, больше ниче не надо, траляляляля!!!
+#include <stdio.h>
+#include <math.h>
+#define degree 2
+struct quad gen_struktur(float a[]);
+int get_koaf(float a[], int size_a);
+int find_korny_quad(struct quad *urav);
+struct quad{
+    double koaf[degree+2];
+    double dis = EOF;
+    double korn[degree]=
+        {
+        EOF,
+        EOF,
+        };
+};
+int get_koaf(float a[], int size_a){
+
+    int len_a = size_a/sizeof(a[0]);
+    int j = 0, i =0;
+    float k;
+
+    while(i<len_a)   {
+        j = scanf("%f", &k);
+        if (j>0){
+            a[i] = k;
+            }
+        else{
+            printf("error");
+            break;
+            }
+        i++;
+    }
+
+}
+
+int find_korny_quad(struct quad *urav){
+    (*urav).koaf[2] -= (*urav).koaf[3];
+    (*urav).dis = (*urav).koaf[1]*(*urav).koaf[1] - 4*(*urav).koaf[0]*(*urav).koaf[2];
+    if ((*urav).dis >= 0){
+        (*urav).korn[0] = (-(*urav).koaf[1] + sqrt((*urav).dis))/(double) 2/(*urav).koaf[0];
+        (*urav).korn[1] = (-(*urav).koaf[1] - sqrt((*urav).dis))/(double) 2/(*urav).koaf[0];
+        return 1;
+        }
+    else{
+        return EOF;
+    }
+}
+struct quad gen_struktur(float a[degree+2])
+{
+    struct quad equ;
+    for(int i=0; i<(degree+2); i++){
+        equ.koaf[i]=(double)a[i];
+    }
+    return equ;
+}
+int main()
+{
+    float a[4]={
+    1,2,3, 4
+    };
+    int h;
+    h = get_koaf(a, sizeof(a));
+    struct quad urav = gen_struktur(a);
+    find_korny_quad(&urav);
+    if (urav.dis >= 0){
+        printf("%lf, %lf - корни", urav.korn[0], urav.korn[1]);
+        }
+    else{
+        printf("корней нет");
+        }
+}
