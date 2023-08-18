@@ -10,8 +10,6 @@ int main()
     };
     int h = 0;
     struct quad urav;
-
-
     h = get_koaf(a, sizeof(a));
     urav = gen_struktur(a);
     find_korny_quad(&urav);

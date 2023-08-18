@@ -25,29 +25,31 @@ int get_koaf(double a[], int size_a){
 
 
     int len_a = size_a/sizeof(a[0]);
-    printf("Введите пожалуйста %d коэфицентов ",len_a );
+    printf("Введите пожалуйста %d коэфицентов\n",len_a );
     while(i<len_a)   {
         j = scanf("%lf", &k);
         if (j>0){
             a[i] = k;
             i++;
+            printf("Коэфицентов получено %d \n", i);
             }
         else{
-            printf("Коэфиценты неверный ");
+            printf("Коэфиценты неверный\n");
             fflush(stdin);
             }
     }
-    printf("Коэфиценты введены");
+    printf("Коэфиценты введены\n");
 
 }
 
 
 int find_korny_quad(struct quad *urav){
-    printf("Начинаем поиск корней ");
+    printf("Начинаем поиск корней\n");
     double a = (*urav).koaf[0];
     double b = (*urav).koaf[1];
     double c = (*urav).koaf[2] - (*urav).koaf[3];
     double dis = NAN;
+    int for_return = NAN;
 
 
     (*urav).dis = b*b - 4*a*c;
@@ -55,14 +57,14 @@ int find_korny_quad(struct quad *urav){
     if (dis>(-ep)){
         (*urav).korn[0] = (-b + sqrt(dis))/(double) 2/a;
         (*urav).korn[1] = (-b - sqrt(dis))/(double) 2/a;
-        printf("Корни найдены ");
 
-        return 1;
+        for_return = 1;
         }
     else{
-        return -1;
+        for_return = -1;
     }
-    printf("Корни найдены ");
+    printf("Корни найдены\n");
+    return for_return;
 }
 
 
