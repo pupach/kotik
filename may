@@ -2,26 +2,27 @@
 #include <stdio.h>
 #include <math.h>
 #define degree 2
-struct quad gen_struktur(float a[]);
-int get_koaf(float a[], int size_a);
+struct quad gen_struktur(double a[]);
+int get_koaf(double a[], int size_a);
 int find_korny_quad(struct quad *urav);
 struct quad{
-    double koaf[degree+2];
-    double dis = EOF;
+    double koaf[degree+2] = {0};
+
+    double dis =NAN;
     double korn[degree]=
         {
-        EOF,
-        EOF,
+         NAN,
+        NAN,
         };
 };
-int get_koaf(float a[], int size_a){
+int get_koaf(double a[], int size_a){
+    int j = 0, i =0;
+    double k = (double)0;
+
 
     int len_a = size_a/sizeof(a[0]);
-    int j = 0, i =0;
-    float k;
-
     while(i<len_a)   {
-        j = scanf("%f", &k);
+        j = scanf("%lf", &k);
         if (j>0){
             a[i] = k;
             }
@@ -35,18 +36,24 @@ int get_koaf(float a[], int size_a){
 }
 
 int find_korny_quad(struct quad *urav){
-    (*urav).koaf[2] -= (*urav).koaf[3];
-    (*urav).dis = (*urav).koaf[1]*(*urav).koaf[1] - 4*(*urav).koaf[0]*(*urav).koaf[2];
-    if ((*urav).dis >= 0){
-        (*urav).korn[0] = (-(*urav).koaf[1] + sqrt((*urav).dis))/(double) 2/(*urav).koaf[0];
-        (*urav).korn[1] = (-(*urav).koaf[1] - sqrt((*urav).dis))/(double) 2/(*urav).koaf[0];
+    double a = (*urav).koaf[0];
+    double b = (*urav).koaf[1];
+    double c = (*urav).koaf[2] - (*urav).koaf[3];
+    double dis = NAN;
+
+
+    (*urav).dis = b*b - 4*a*c;
+     dis = (*urav).dis;
+    if (dis >= 0){
+        (*urav).korn[0] = (-b + sqrt(dis))/(double) 2/a;
+        (*urav).korn[1] = (-b - sqrt(dis))/(double) 2/a;
         return 1;
         }
     else{
         return EOF;
     }
 }
-struct quad gen_struktur(float a[degree+2])
+struct quad gen_struktur(double a[degree+2])
 {
     struct quad equ;
     for(int i=0; i<(degree+2); i++){
@@ -56,12 +63,15 @@ struct quad gen_struktur(float a[degree+2])
 }
 int main()
 {
-    float a[4]={
+    double a[4]={
     1,2,3, 4
     };
-    int h;
+    int h = 0;
+    struct quad urav;
+
+
     h = get_koaf(a, sizeof(a));
-    struct quad urav = gen_struktur(a);
+    urav = gen_struktur(a);
     find_korny_quad(&urav);
     if (urav.dis >= 0){
         printf("%lf, %lf - корни", urav.korn[0], urav.korn[1]);
