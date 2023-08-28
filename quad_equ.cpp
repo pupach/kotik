@@ -17,22 +17,23 @@ int read_numbers(double coef[], size_t size_coef, FILE *stream_in)
     size_t i = 0;
     double box_for_scanf = NAN;
 
-        if(!TEST_MODE){printf("Введите пожалуйста %d чисел\n", size_coef);}
+        LOG(!TEST_MODE, stream_out, "Введите пожалуйста %d чисел\n", size_coef);
 
     while(i<size_coef)
     {
-        DEBUG_LOG(stream_out, "while begin, %d, %d", i, size_coef);
+        LOG(DEBUG==2, stream_out, "while begin, %d, %d", i, size_coef);
 
         jesttttt = fscanf(stream_in, "%lf", &box_for_scanf);   // this is krivo!!!
 
-        DEBUG_LOG(stream_out, "fscanf, %d, box_for_scanf %d\n", jesttttt, box_for_scanf);  //
+        LOG(DEBUG==2, stream_out, "fscanf, %d, box_for_scanf %d\n", jesttttt, box_for_scanf);  //
 
         if (jesttttt > 0)
         {
             coef[i] = box_for_scanf;
             i++;
 
-            if(!TEST_MODE){printf("чисел получено %d \n", i);}
+            LOG(!TEST_MODE, stream_out, "чисел получено %d \n", i);
+
         }
         else if (jesttttt==-1)
         {
@@ -40,18 +41,18 @@ int read_numbers(double coef[], size_t size_coef, FILE *stream_in)
         }
         else
         {
+            LOG(!TEST_MODE and DEBUG, stream_out, "чисел неверный\n");
 
-            if(!TEST_MODE){printf("чисел неверный\n");}
-
-            double num_from_string = check_about_NAN_and_INF(stream_in);  // TODO: rename, improper English
-            if (compare_double(&num_from_string, &Poison_value) != 0)
+            double num_from_string = check_about_NAN_and_INF(stream_in);
+            LOG(!TEST_MODE, stream_out, "чисkj %d \n %d\n", num_from_string, compare_double(&num_from_string, &Poison_value));
+            if (compare_double(&num_from_string, &for_compare_double) != 0)
             {
                 coef[i] = num_from_string;
                 i++;
             }
         }
     }
-    if(!TEST_MODE){printf("числа введены\n");}
+    LOG(!TEST_MODE, stream_out, "числа введены\n");
     return 1;
 
 }
@@ -61,34 +62,34 @@ int solve_equ(struct quad *equ)
     is_bad_ptr(equ);
     assert_perror((!isnan(equ->a)) and (!isnan(equ->b)) and (!isnan(equ->c)));
 
-    DEBUG_LOG(stream_out, "Определяем степень уравнения\n ewecwce %d, %d \n",
+    LOG(DEBUG, stream_out, "Определяем степень уравнения\n ewecwce %d, %d \n",
                 (compare_double(&(equ->a), &for_compare_double) == 0),
                 (compare_double(&(equ->b), &for_compare_double) == 0));
 
 
-    if ((compare_double(&(equ->a), &for_compare_double) == 0)&&(compare_double(&(equ->b), &for_compare_double) == 0)) // TODO: extract, is_zero
+    if ((compare_double(&(equ->a), &for_compare_double) == 0)&&(compare_double(&(equ->b), &for_compare_double) == 0))
     {
 
-        DEBUG_LOG(stream_out, "Степень 0\n");
+        LOG(DEBUG, stream_out, "Степень 0\n");
 
         _inf_or_not_amount_roots(equ); // TODO: do not use _ before the name, they are reserved
     }
     else if (compare_double(&(equ->a), &for_compare_double) == 0)
     {
 
-        DEBUG_LOG(stream_out, "Степень 1\n");
+        LOG(DEBUG, stream_out, "Степень 1\n");
 
         _find_roots_lin_equ(equ);
     }
     else
     {
 
-        DEBUG_LOG(stream_out, "Степень 2\n");
+        LOG(DEBUG, stream_out, "Степень 2\n");
 
         _find_roots_quad_equ(equ);
     }
 
-    DEBUG_LOG(stream_out, "Определили степень\n");
+    LOG(DEBUG, stream_out, "Определили степень\n");
 
     assert_perror((!isnan(equ->amount_roots)) and (equ->amount_roots != Poison_value));
 
@@ -97,21 +98,22 @@ int solve_equ(struct quad *equ)
 
 static void _find_roots_lin_equ(struct quad *equ)
 {
-    DEBUG_LOG(stream_out, "_find_roots_lin_equ begin\n");
+    is_bad_ptr(equ);
+    LOG(DEBUG, stream_out, "_find_roots_lin_equ begin\n");
     assert_perror(((equ->b)!=0) and ((equ->a)==0));
 
     equ->roots[0] = -(equ->c)/(equ->b);
     equ->amount_roots = 1;
 
-    DEBUG_LOG(stream_out, "_find_roots_lin_equ end\n");
+    LOG(DEBUG, stream_out, "_find_roots_lin_equ end\n");
 }
 
 
-static void _inf_or_not_amount_roots(struct quad *equ) // TODO: rename
+static void _inf_or_not_amount_roots(struct quad *equ)
 {
-
-    assert_perror(((equ->a)==0) and ((equ->b)==0));
-    DEBUG_LOG(stream_out, "_inf_or_not_amount_roots begin\n");
+    is_bad_ptr(equ);
+    assert_perror((compare_double(&(equ->a), &for_compare_double) == 0) and (compare_double(&(equ->b), &for_compare_double) == 0));
+    LOG(DEBUG, stream_out, "_inf_or_not_amount_roots begin\n");
 
     if (compare_double((&(equ->c)), &for_compare_double) == 0)
     {
@@ -124,14 +126,14 @@ static void _inf_or_not_amount_roots(struct quad *equ) // TODO: rename
         equ->amount_roots = 0;
     }
 
-    DEBUG_LOG(stream_out, "_inf_or_not_amount_roots end\n");
+    LOG(DEBUG, stream_out, "_inf_or_not_amount_roots end\n");
 }
 
 
 static void _find_roots_quad_equ(struct quad *equ)
 {
 
-    DEBUG_LOG(stream_out, "_find_roots_quad_equ begin\n");
+    LOG(DEBUG, stream_out, "_find_roots_quad_equ begin\n");
     is_bad_ptr(equ);
 
     printf("Начинаем поиск корней\n");
@@ -146,7 +148,7 @@ static void _find_roots_quad_equ(struct quad *equ)
     else if (dis_and_zero == 1)
     {
         double dis_sqrt = sqrt(equ->dis);
-        equ->roots[0] = (-(equ->b) + dis_sqrt)/(double)2/(equ->a);    // this is krivo!!!  // this is dolgo!!!
+        equ->roots[0] = (-(equ->b) + dis_sqrt)/(double)2/(equ->a);
         equ->roots[1] = (-(equ->b) - dis_sqrt)/(double)2/(equ->a);
         equ->amount_roots = 2;
     }
@@ -156,30 +158,35 @@ static void _find_roots_quad_equ(struct quad *equ)
     }
     printf("Корни найдены\n");
 
-    DEBUG_LOG(stream_out, "_find_roots_quad_equ begin\n");
+    LOG(DEBUG, stream_out, "_find_roots_quad_equ begin\n");
 
 }
 
 void print_info_about_roots(const struct quad *equ)
 {
-
-    DEBUG_LOG(stream_out, "get_and_print_inf_about_roots begin\n");
+    is_bad_ptr(equ);
+    LOG(DEBUG, stream_out, "get_and_print_inf_about_roots begin\n");
 
     switch(equ->amount_roots)
     {
         case 0:
             printf("корней нет\n");
+            break;
         case 1:
             printf("%lf - корeнь\n", equ->roots[0]);
+            break;
         case 2:
             printf("%lf, %lf - корни\n", equ->roots[0], equ->roots[1]);
+            break;
         case Amount_roots_inf:
             printf("Бесконечно много корней\n");
+            break;
         default:
             printf("Неизвестная ошибка\n");
+            break;
     }
 
-    DEBUG_LOG(stream_out, "get_and_print_inf_about_roots end\n");
+    LOG(DEBUG, stream_out, "get_and_print_inf_about_roots end\n");
     if (TEST_MODE)
     {
         fprintf(stream_out, "Коэфиценты %lf, %lf, %lf\n Дискриминант %lf\nкорни %lf, %lf\n количество корней %d",
@@ -190,7 +197,8 @@ void print_info_about_roots(const struct quad *equ)
 
 void gen_struktur(double coef[DEGREE+1], struct quad *equ)
 {
-    DEBUG_LOG(stream_out, "gen_struktur begin\n");
+    is_bad_ptr(equ);
+    LOG(DEBUG, stream_out, "gen_struktur begin\n");
 
     equ->a = coef[0];
     equ->b = coef[1];
@@ -202,7 +210,7 @@ void gen_struktur(double coef[DEGREE+1], struct quad *equ)
     {
         equ->roots[i] = NAN;
     }
-    DEBUG_LOG(stream_out, "gen_struktur end\n");
+    LOG(DEBUG, stream_out, "gen_struktur end\n");
 }
 
 void is_bad_ptr(const void *ptr_for_check)

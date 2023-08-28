@@ -21,6 +21,7 @@ bool test_for_one_quad_equ(struct quad *equ, double roots[])
     {
         qsort(equ->roots, DEGREE, sizeof(double), compare_double);
         qsort(roots, DEGREE, sizeof(double), compare_double);
+
         if (compare_double(&(equ->roots[i]), &(roots[i])) != 0)
         {
             printf("тест не прошел подробности в потоке логов");
@@ -33,7 +34,7 @@ bool test_for_one_quad_equ(struct quad *equ, double roots[])
 
 int fill_test_data_with_file(struct Test_data all_data[])
 {
-    DEBUG_LOG(stream_out, "fill_test_data_with_fill begin\n");
+    LOG(DEBUG, stream_out, "fill_test_data_with_fill begin\n");
     const int MAX_SIZE = 100;
     char file_input[MAX_SIZE];
 
@@ -59,19 +60,21 @@ int fill_test_data_with_file(struct Test_data all_data[])
     int flag_EOF = 1;
     int i =0;
     const int amount_val_in_test_data = 6;
-    DEBUG_LOG(stream_out, "stream_in define\n");
+
+    LOG(DEBUG, stream_out, "stream_in define\n");
+
     do
     {
-        DEBUG_LOG(stream_out, "while step %d begin\n", i);
+        LOG(DEBUG==2, stream_out, "while step %d begin\n", i);
         double numbers[amount_val_in_test_data];
         flag_EOF = read_numbers(numbers, amount_val_in_test_data, stream_in);
 
-        DEBUG_LOG(stream_out, "test_do_while 1, %d", flag_EOF);
+        LOG(DEBUG==2, stream_out, "test_do_while 1, %d", flag_EOF);
 
         char name[SIZE_ARR(all_data[0].name1)];
         flag_EOF = fscanf(stream_in, "%s", &name);
 
-        DEBUG_LOG(stream_out, "test_do_while 2, %d, %s", flag_EOF, name);
+        LOG(DEBUG==2, stream_out, "test_do_while 2, %d, %s", flag_EOF, name);
 
         if ((int) flag_EOF == -1){break;}
 
@@ -83,19 +86,23 @@ int fill_test_data_with_file(struct Test_data all_data[])
         all_data[i].am_roots = (int)numbers[5];
 
         strncpy(all_data[i].name1, name, 10);
-        DEBUG_LOG(stream_out, "while step %d end\n", i);
+        LOG(DEBUG==2, stream_out, "while step %d end\n", i);
         i++;
 
     }while(flag_EOF);
+
+    LOG(DEBUG, stream_out, "fill_test_data_with_fill end\n");
+
     return i;
-    DEBUG_LOG(stream_out, "fill_test_data_with_fill end\n");
+
+
 
 }
 
 
 int fill_test_data_with_code(struct Test_data all_data[])
 {
-    DEBUG_LOG(stream_out, "fill_test_data_with_code begin\n");
+    LOG(DEBUG, stream_out, "fill_test_data_with_code begin\n");
     Test_data a1 = {.coef={1, 2, 3}, .roots={NAN, NAN}, .am_roots=0, .name1={'1', 0}};
     all_data[0] = a1;
 
@@ -104,7 +111,7 @@ int fill_test_data_with_code(struct Test_data all_data[])
 
     Test_data a3 = {.coef={1, 5, 4}, .roots={-1, -4}, .am_roots=2, .name1={'1', 0}};
     all_data[2] = a3;
-    DEBUG_LOG(stream_out, "fill_test_data_with_code end\n");
+    LOG(DEBUG, stream_out, "fill_test_data_with_code end\n");
 
     return 3;
 
@@ -113,7 +120,7 @@ int fill_test_data_with_code(struct Test_data all_data[])
 
 void full_test_for_solve_equ()
 {
-    DEBUG_LOG(stream_out, "full_test_for_solve_equ begin\n");
+    LOG(DEBUG, stream_out, "full_test_for_solve_equ begin\n");
 
     struct Test_data all_data[MAX_SIZE_ARRAY_OF_TEST];
     unsigned amount_test = 0;
@@ -126,7 +133,7 @@ void full_test_for_solve_equ()
     {
         amount_test = fill_test_data_with_file(all_data);
     }
-    DEBUG_LOG(stream_out, "INPUT_TEST_MODE define\n");
+    LOG(DEBUG, stream_out, "INPUT_TEST_MODE define\n");
 
     for (unsigned i = 0; i < amount_test; i++)
     {
@@ -142,7 +149,7 @@ void full_test_for_solve_equ()
         else
         {
 
-            DEBUG_LOG(stream_out, "%d test complete\n", i);
+            LOG(DEBUG, stream_out, "%d test complete\n", i);
 
             fprintf(stream_out, "тест %d не прошел. Корни ожидались %lf"
                             ", %lf\n вводимые коэфиценты %lf, %lf, %lf",
@@ -153,7 +160,7 @@ void full_test_for_solve_equ()
         }
     }
 
-    DEBUG_LOG(stream_out, "full_test_for_solve_equ end\n");
+    LOG(DEBUG, stream_out, "full_test_for_solve_equ end\n");
 }
 
 

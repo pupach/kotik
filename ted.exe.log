@@ -1,0 +1,2007 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004C63A0 в функции fill_test_data_with_file(). Попытка записать данные по адресу 0x009A0000 в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x5110 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004C63A0 in C:\pupach_MFTI\ted.exe: fill_test_data_with_file()
+# 1 0x004C66EC in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 2 0x0048D37E in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 24 2023 19:40:22, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 24 2023 19:40:34
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#16: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу NULL. Попытка прочесть данные по адресу NULL. Дополнительно, превышен лимит исключений _TX_EXCEPTIONS_LIMIT (16). Также превышен лимит фатальных исключений _TX_FATAL_EXCEPTIONS_LIMIT (16). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x5110 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 2 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+# 3 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+# 4 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+# 5 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+# 6 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+# 7 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+# 8 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+# 9 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#10 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#11 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#12 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#13 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#14 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#15 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#16 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#17 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#18 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#19 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#20 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#21 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#22 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#23 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#24 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#25 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#26 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#27 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#28 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#29 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#30 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#31 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#32 0x004C66EC in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+#33 0x0048D37E in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 24 2023 19:40:22, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 24 2023 19:40:35
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004C63A0 в функции fill_test_data_with_file(). Попытка записать данные по адресу 0x009A0000 в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x554C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004C63A0 in C:\pupach_MFTI\ted.exe: fill_test_data_with_file()
+# 1 0x004C66EC in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 2 0x0048D37E in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 24 2023 19:40:22, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 24 2023 19:43:21
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#16: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу NULL. Попытка прочесть данные по адресу NULL. Дополнительно, превышен лимит исключений _TX_EXCEPTIONS_LIMIT (16). Также превышен лимит фатальных исключений _TX_FATAL_EXCEPTIONS_LIMIT (16). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x554C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 2 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+# 3 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+# 4 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+# 5 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+# 6 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+# 7 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+# 8 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+# 9 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#10 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#11 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#12 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#13 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#14 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#15 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#16 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#17 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#18 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#19 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#20 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#21 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#22 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#23 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#24 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#25 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#26 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#27 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#28 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#29 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#30 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#31 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#32 0x004C66EC in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+#33 0x0048D37E in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 24 2023 19:40:22, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 24 2023 19:43:20
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004C6415 в функции fill_test_data_with_file(). Попытка записать данные по адресу 0x009A0000 в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x536C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004C6415 in C:\pupach_MFTI\ted.exe: fill_test_data_with_file()
+# 1 0x004C6761 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 2 0x0048D37E in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 24 2023 19:50:10, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 24 2023 19:50:13
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#16: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу NULL. Попытка прочесть данные по адресу NULL. Дополнительно, превышен лимит исключений _TX_EXCEPTIONS_LIMIT (16). Также превышен лимит фатальных исключений _TX_FATAL_EXCEPTIONS_LIMIT (16). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x536C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 2 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+# 3 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+# 4 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+# 5 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+# 6 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+# 7 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+# 8 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+# 9 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#10 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#11 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#12 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#13 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#14 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#15 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#16 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#17 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#18 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#19 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#20 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#21 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#22 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#23 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#24 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#25 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#26 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#27 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#28 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#29 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#30 0x776984D4 in C:\Windows\SYSTEM32\ntdll.dll: RtlInterlockedCompareExchange64()
+#31 0x77678756 in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#32 0x004C6761 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+#33 0x0048D37E in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 24 2023 19:50:10, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 24 2023 19:50:12
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x564 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A9942 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C622D in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C688F in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:33:06, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:35:03
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x564 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A9942 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C622D in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C688F in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:33:06, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:35:03
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x1280 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A9942 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C622D in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C688F in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:33:06, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:36:27
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x1280 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A9942 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C622D in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C688F in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:33:06, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:36:27
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x1A2C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A9975 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C622D in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C688F in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:39:33, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:39:59
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x1A2C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A9975 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C622D in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C688F in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:39:33, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:39:59
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0xB34 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A9934 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C6281 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C68E3 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:41:24, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:41:40
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0xB34 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A9934 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C6281 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C68E3 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:41:24, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:41:40
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x426C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A9962 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62AD in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C690F in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:43:05, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:43:08
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x426C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A9962 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62AD in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C690F in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:43:05, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:43:08
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x636C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A996B in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62B5 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C6917 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:44:35, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:44:39
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x636C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A996B in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62B5 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C6917 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:44:35, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:44:39
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x6458 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A996B in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62B5 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C6917 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:45:27, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:45:30
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x6458 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A996B in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62B5 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C6917 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:45:27, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:45:30
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x37C8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A996A in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62B5 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C6917 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:46:02, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:46:05
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x37C8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A996A in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62B5 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C6917 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:46:02, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:46:05
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x5AC8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A996A in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62B5 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C6917 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:46:02, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:48:23
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x5AC8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A996A in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62B5 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C6917 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:46:02, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:48:23
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x6B5C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A996A in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62B5 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C6917 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:46:02, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:51:11
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x6B5C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A996A in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62B5 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C6917 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:46:02, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:51:11
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x4E8C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A996A in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62B5 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C6917 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:46:02, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:52:15
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x4E8C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A996A in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62B5 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C6917 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:46:02, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:52:15
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x60F4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A996A in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62B5 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C6917 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:46:02, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:54:27
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x60F4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A996A in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62B5 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C6917 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:46:02, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:54:27
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x1AA4 (Main), GetLastError(): 126 (The specified module could not be found). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A9A36 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x0048D483 in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:55:43, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:56:35
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x1AA4 (Main), GetLastError(): 126 (The specified module could not be found). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A9A36 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x0048D483 in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:55:43, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:56:35
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x6708 (Main), GetLastError(): 126 (The specified module could not be found). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A9A36 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x0048D483 in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:57:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:58:04
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x6708 (Main), GetLastError(): 126 (The specified module could not be found). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A9A36 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x0048D483 in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:57:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:58:04
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x35DC (Main), GetLastError(): 126 (The specified module could not be found). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A9A36 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x0048D483 in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:59:49, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:59:52
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00454C18 в функции compare_double(). Попытка прочесть данные по адресу NULL в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x35DC (Main), GetLastError(): 126 (The specified module could not be found). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00454C18 in C:\pupach_MFTI\ted.exe: compare_double()
+# 1 0x004A9A36 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x0048D483 in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 15:59:49, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 15:59:52
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x004A9B8E в функции _find_roots_lin_equ() в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x5B4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004A9B8E in C:\pupach_MFTI\ted.exe: _find_roots_lin_equ()
+# 1 0x004A9AD2 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62F1 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C6953 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 16:01:17, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 16:01:36
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x004A9B8E в функции _find_roots_lin_equ() в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x5B4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004A9B8E in C:\pupach_MFTI\ted.exe: _find_roots_lin_equ()
+# 1 0x004A9AD2 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62F1 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C6953 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 16:01:17, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 16:01:36
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x004A9B8E в функции _find_roots_lin_equ() в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x43B4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004A9B8E in C:\pupach_MFTI\ted.exe: _find_roots_lin_equ()
+# 1 0x004A9AD2 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62F1 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C6953 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 16:01:17, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 16:02:43
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x004A9B8E в функции _find_roots_lin_equ() в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x43B4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004A9B8E in C:\pupach_MFTI\ted.exe: _find_roots_lin_equ()
+# 1 0x004A9AD2 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62F1 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C6953 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 16:01:17, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 16:02:43
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x004A9B85 в функции _find_roots_lin_equ() в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x18E8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004A9B85 in C:\pupach_MFTI\ted.exe: _find_roots_lin_equ()
+# 1 0x004A9AD2 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62E1 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C6943 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 16:05:31, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 16:06:10
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x004A9B85 в функции _find_roots_lin_equ() в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x18E8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004A9B85 in C:\pupach_MFTI\ted.exe: _find_roots_lin_equ()
+# 1 0x004A9AD2 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62E1 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C6943 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 16:05:31, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 16:06:10
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x004A9B66 в функции _find_roots_lin_equ() в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x69EC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004A9B66 in C:\pupach_MFTI\ted.exe: _find_roots_lin_equ()
+# 1 0x004A9AD8 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62FD in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C695F in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 16:09:31, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 16:09:50
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x004A9B66 в функции _find_roots_lin_equ() в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x69EC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004A9B66 in C:\pupach_MFTI\ted.exe: _find_roots_lin_equ()
+# 1 0x004A9AD8 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C62FD in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C695F in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 16:09:31, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 16:09:50
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x004A9AC8 в функции _find_roots_lin_equ() в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x7264 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004A9AC8 in C:\pupach_MFTI\ted.exe: _find_roots_lin_equ()
+# 1 0x004A9A10 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C622D in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C688F in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 16:13:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 16:13:39
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x004A9AC8 в функции _find_roots_lin_equ() в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x7264 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004A9AC8 in C:\pupach_MFTI\ted.exe: _find_roots_lin_equ()
+# 1 0x004A9A10 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C622D in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C688F in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 16:13:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 16:13:39
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x004A9B04 в функции _find_roots_lin_equ() в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x67B0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004A9B04 in C:\pupach_MFTI\ted.exe: _find_roots_lin_equ()
+# 1 0x004A9A48 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C6269 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C68CB in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 16:16:19, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 16:16:25
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x004A9B04 в функции _find_roots_lin_equ() в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x67B0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004A9B04 in C:\pupach_MFTI\ted.exe: _find_roots_lin_equ()
+# 1 0x004A9A48 in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C6269 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C68CB in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 16:16:19, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 16:16:25
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x004A9AFB в функции _find_roots_lin_equ() в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x466C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004A9AFB in C:\pupach_MFTI\ted.exe: _find_roots_lin_equ()
+# 1 0x004A9A3F in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C6261 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C68C3 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 16:17:09, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 16:17:13
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\ted.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x004A9AFB в функции _find_roots_lin_equ() в модуле C:\pupach_MFTI\ted.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007348BC (32-bit), Flags: Cmdre0, Thread: 0x466C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004A9AFB in C:\pupach_MFTI\ted.exe: _find_roots_lin_equ()
+# 1 0x004A9A3F in C:\pupach_MFTI\ted.exe: solve_equ()
+# 2 0x004C6261 in C:\pupach_MFTI\ted.exe: test_for_one_quad_equ()
+# 3 0x004C68C3 in C:\pupach_MFTI\ted.exe: full_test_for_solve_equ()
+# 4 0x0048D3FE in C:\pupach_MFTI\ted.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2023 16:17:09, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 25 2023 16:17:13
+
+Run file:	C:\pupach_MFTI\ted.exe
+Directory:	C:\pupach_MFTI
+
+--------------------------------------------------

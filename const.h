@@ -10,11 +10,11 @@
 #include <assert.h>
 #include <stdarg.h>
 extern int DEBUG;
-#define DEBUG_LOG(...)                                  \
+#define LOG(mode, args...)                                  \
     do {                                                \
-    if(DEBUG) {                                         \
+    if(mode) {                                         \
         fprintf(stderr, "%s:%d\t", __FILE__, __LINE__); \
-        fprintf(__VA_ARGS__);}                          \
+        fprintf(args);}                          \
     } while(0)
 
 
