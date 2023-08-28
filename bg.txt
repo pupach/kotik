@@ -1,0 +1,35 @@
+while begin, 0, 6fscanf, 1, box_for_scanf 0
+while begin, 1, 6fscanf, 1, box_for_scanf 0
+while begin, 2, 6fscanf, 1, box_for_scanf 0
+while begin, 3, 6fscanf, 0, box_for_scanf 0
+while begin, 4, 6fscanf, 0, box_for_scanf 0
+while begin, 5, 6fscanf, 1, box_for_scanf 0
+test_do_while 1, 1test_do_while 2, 1, "1"while begin, 0, 6fscanf, 1, box_for_scanf 0
+while begin, 1, 6fscanf, 1, box_for_scanf 0
+while begin, 2, 6fscanf, 1, box_for_scanf 0
+while begin, 3, 6fscanf, 0, box_for_scanf 0
+while begin, 4, 6fscanf, 0, box_for_scanf 0
+while begin, 5, 6fscanf, 0, box_for_scanf 0
+while begin, 5, 6fscanf, 1, box_for_scanf 0
+test_do_while 1, 1test_do_while 2, 1, 5while begin, 0, 6fscanf, 1, box_for_scanf 0
+while begin, 1, 6fscanf, 1, box_for_scanf 0
+while begin, 2, 6fscanf, 1, box_for_scanf 0
+while begin, 3, 6fscanf, 0, box_for_scanf 0
+while begin, 3, 6fscanf, -1, box_for_scanf 0
+test_do_while 1, -1test_do_while 2, -1, 5gen_struktur begin
+gen_struktur end
+Определяем степень уравнения
+Степень 2
+_find_roots_quad_equ begin
+_find_roots_quad_equ begin
+Определили степень
+тест 1  завершен успешно
+gen_struktur begin
+gen_struktur end
+Определяем степень уравнения
+Степень 0
+ (compare_double(equ->a, (double)0) == 0) 1
+(compare_double(equ->b, (double)0)) 1_inf_or_not_amount_roots begin
+_inf_or_not_amount_roots end
+Определили степень
+тест 2  завершен успешно
