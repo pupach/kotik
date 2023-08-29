@@ -1,0 +1,14 @@
+while begin, 0, 3fscanf, 1, box_for_scanf 0
+while begin, 1, 3fscanf, 1, box_for_scanf 0
+while begin, 2, 3fscanf, 1, box_for_scanf 0
+ begin
+ end
+Определяем степень уравнения
+ ewecwce 0, 0 
+Степень 2
+ begin
+ begin
+Определили степень
+asserts 0, 1
+ begin
+ end

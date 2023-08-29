@@ -1,8 +1,0 @@
-int DEBUG = 1;
-int TEST_MODE = 0;
-int DEBUG = 0;
-char POISON_VALUE_FOR_FILE[100] = "i";
-char OUTPUT_FILE[100] ="i";
-FILE *stream_out = stdout;
-const int Amount_roots_inf = -1;
-int Array_spliter[SPLITERS] = {'\n', ' ', '\t', ','};

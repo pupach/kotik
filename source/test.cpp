@@ -1,0 +1,179 @@
+#include "quad_equ.h"
+#include "func_numbers.h"
+#include "debug_and_logs.h"
+#include "input_or_output_function.h"
+#include "test.h"
+#include "use_me_and_live_without_errors.h"
+
+
+const int MAX_SIZE_ARRAY_OF_TEST = 100;
+int INPUT_TEST_MODE = 0;
+int TEST_MODE=0;
+
+
+
+
+bool test_for_one_quad_equ(struct quad *equ, double roots[])
+{
+    is_bad_ptr(equ);
+
+    solve_equations(equ);
+    for (int i = 0; i < DEGREE; i++)
+    {
+        qsort(equ->roots, DEGREE, sizeof(double), comp_double_for_qsort);
+        qsort(roots, DEGREE, sizeof(double), comp_double_for_qsort);
+
+        if (compare_double(&(equ->roots[i]), &(roots[i])) != 0)
+        {
+            printf("тест не прошел подробности в потоке логов");
+            return false;
+        }
+    }
+    return true;
+}
+
+
+FILE * open_file_for_get_test_data()
+{
+    const int MAX_SIZE = 100;
+    char file_input[MAX_SIZE];
+    FILE *stream_in;
+    printf("введите название файла или stdin если хотите вводить ручками.");
+    int res_scanf = scanf("%s", &file_input);
+    stream_in = fopen(file_input, "r");
+    LOG(DEBUG>=MIN_DEBUG, stream_out, "open_file_for_get_test_data begin %d\n", stream_in == NULL);
+    if (stream_in == NULL)
+    {
+        printf("We cant find this file");
+        stream_in = open_file_for_get_test_data();
+    }
+
+    if ((strcmp(file_input, "stdin")==0)||(res_scanf<=0))
+    {
+        stream_in = stdin;
+    }
+    else
+    {
+        stream_in = fopen(file_input, "r");
+        LOG(DEBUG, stream_out, "stream_in is file begin\n");
+    }
+    return stream_in;
+}
+
+
+int fill_test_data_from_file(struct Test_data all_data[])
+{
+    LOG(DEBUG, stream_out, "fill_test_data_with_fill begin\n");
+
+    FILE* stream_in = open_file_for_get_test_data();
+
+    int flag_EOF = 1;
+    int i =0;
+    const int amount_val_in_test_data = 6;
+
+
+    LOG(DEBUG>=MIN_DEBUG, stream_out, "stream_in define\n");
+
+    do
+    {
+        LOG(DEBUG>=HIGHT_DEBUG, stream_out, "while step %d begin\n", i);
+        double data_numbers[amount_val_in_test_data];
+        flag_EOF = read_numbers(data_numbers, amount_val_in_test_data, stream_in);
+
+        LOG(DEBUG>=HIGHT_DEBUG, stream_out, "test_do_while 1, %d", flag_EOF);
+
+        char name[SIZE_ARR(all_data[0].name)];
+        flag_EOF = fscanf(stream_in, "%s", &name);
+
+        LOG(DEBUG>=HIGHT_DEBUG, stream_out, "test_do_while 2, %d, %s", flag_EOF, name);
+
+        if ((int) flag_EOF == -1) break;
+
+        memcpy(all_data[i].coef, data_numbers, (DEGREE + 1)*sizeof(data_numbers[0]));
+        memcpy(all_data[i].roots, (data_numbers + (DEGREE + 1)), DEGREE*sizeof(data_numbers[0]));
+
+        if (isinf(data_numbers[DEGREE*2+1]))
+        {
+            all_data[i].am_roots = AMOUNT_ROOTS_INF;
+        }
+        else
+        {
+            all_data[i].am_roots = data_numbers[DEGREE*2+1];
+        }
+
+        strncpy(all_data[i].name, name, SIZE_ARR(all_data[0].name));
+        LOG(DEBUG==HIGHT_DEBUG, stream_out, "while step %d end\n", i);
+        i++;
+
+    }while(flag_EOF);
+
+    LOG(DEBUG>=MIN_DEBUG, stream_out, "fill_test_data_with_fill end\n");
+
+    return i;
+
+
+
+}
+
+
+int fill_test_data_with_code(struct Test_data all_data[])
+{
+    LOG(DEBUG>=MIN_DEBUG, stream_out, "fill_test_data_with_code begin\n");
+
+    int amount_of_tests = 0;
+    /**
+    create_test(1, 2, 3, NAN, NAN, 0, amount_of_tests);
+    create_test(1, 5, 4, -1, -4, 2, amount_of_tests);
+    */
+    return amount_of_tests;
+
+}
+
+
+void full_test_for_solve_equ()
+{
+    LOG(DEBUG>=MIN_DEBUG, stream_out, "full_test_for_solve_equ begin\n");
+
+    struct Test_data all_data[MAX_SIZE_ARRAY_OF_TEST];
+    unsigned amount_test = 0;
+
+    if(INPUT_TEST_MODE)
+    {
+        amount_test = fill_test_data_with_code(all_data);
+    }
+    else
+    {
+        amount_test = fill_test_data_from_file(all_data);
+    }
+    LOG(DEBUG>=MIN_DEBUG, stream_out, "INPUT_TEST_MODE define\n");
+
+    for (unsigned i = 0; i < amount_test; i++)
+    {
+        struct quad equ_test = {};
+
+        gen_struktur(all_data[i].coef, &equ_test);
+        bool test_res = test_for_one_quad_equ(&equ_test, all_data[i].roots);
+
+        if (test_res)
+        {
+            fprintf(stream_out, "тест %d  завершен успешно\n", i+1);
+        }
+        else
+        {
+
+            LOG(DEBUG>=MIN_DEBUG, stream_out, "%d test complete\n", i);
+
+            fprintf(stream_out, "тест %d не прошел. Корни ожидались %lf"
+                            ", %lf\n вводимые коэфиценты %lf, %lf, %lf",
+                            i+1, all_data[i].roots[1], all_data[i].roots[0],
+                             all_data[i].coef[0],
+                             all_data[i].coef[1], all_data[i].coef[2]);
+
+            print_info_about_roots(&equ_test);
+        }
+    }
+
+    LOG(DEBUG>=MIN_DEBUG, stream_out, "full_test_for_solve_equ end\n");
+}
+
+
