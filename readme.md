@@ -2,7 +2,7 @@
 this program is very USERFRIENDLY
 ## Download
 - So far, this is the only place where the footage is publicly available.
-![](https://github.com/pupach/kotik/image/dow.png)
+![](https://github.com/pupach/kotik/blob/main/image/dow.png)
 - press dowload zip and unpack his
 ## Install
 - install g++
