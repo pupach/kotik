@@ -9,7 +9,7 @@ int comp_double_for_qsort(const void *first, const void *second)
     return compare_double((const double *)first, (const double *)second);
 }
 
-enum return_comp_doub compare_double(const double *first, const double *second)
+enum return_comp_doub compare_double(const double *first, const double *second) //TODO без указателей
 {
         is_bad_ptr(first);
         is_bad_ptr(second);

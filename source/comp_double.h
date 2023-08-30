@@ -11,7 +11,7 @@
 /**
 value, which return #compare_double
 */
-enum return_comp_doub
+enum return_comp_doub      // TODO: caps lock
 {
     equality = 0,///<value when double equal
     fir_big_than_sec = 1,///<value when first bigger than second

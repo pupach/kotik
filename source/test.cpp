@@ -10,7 +10,7 @@ const int MAX_SIZE_ARRAY_OF_TEST = 100;
 int INPUT_TEST_MODE = 0;
 int TEST_MODE=0;
 
-
+//Тесты и время
 
 
 bool test_for_one_quad_equ(struct quad *equ, double roots[])
@@ -116,9 +116,6 @@ int fill_test_data_from_file(struct Test_data all_data[])
     LOG(DEBUG>=MIN_DEBUG, stream_out, "fill_test_data_with_fill end\n");
 
     return i;
-
-
-
 }
 
 

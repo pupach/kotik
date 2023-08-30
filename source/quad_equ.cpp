@@ -90,11 +90,11 @@ static enum CODE_ERRORS find_roots_quad_equ(struct quad *equ)
     LOG(DEBUG_LVL_1, stream_out, " begin\n");
     is_bad_ptr(equ);
 
-    printf("Начинаем поиск корней\n");
+    printf("Начинаем поиск корней\n"); //TODO: enum double comp BIGGER, LOWER
 
     equ->dis = equ->b*equ->b - 4*equ->a*equ->c;
-    int dis_and_zero = is_double_zero(&equ->dis);
-    if (dis_and_zero == 0)
+    int dis_comp_res = is_double_zero(&equ->dis);
+    if (dis_is_zero == 0)
     {
         equ->amount_roots = 1;
         equ->roots[0] = (-equ->b)/equ->a/2.;

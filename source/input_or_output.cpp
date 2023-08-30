@@ -5,7 +5,7 @@
 
 
 
-const char ARRAY_SPLITTER[SPLITERS] = {' ', '\t', ','};
+const char ARRAY_SPLITTER[SPLITERS_LEN] = {' ', '\t', ','};
 
 size_t read_number(size_t counter, double * box_for_scanf, FILE *stream_in, int *amount_characters)
 {
@@ -111,28 +111,28 @@ int clear_buff_input(int *amount_characters, FILE *stream_in)
     do
     {
         (*amount_characters)+=1;
-        int i = 0;
 
         char symb = getc(stream_in);
 
-
         LOG(DEBUG_LVL_2, stream_out, "symb getc, %c", symb);
 
+        counter++;
         if (symb == SYMBOL_ENTER)
         {
             (*amount_characters) = 0;
-            flag = true;
+            break;
         }
-        while(i <= SPLITERS and !flag)
+        else
         {
-            flag = (symb == ARRAY_SPLITTER[i]);
-            i++;
+            for (int i = 0; i < SPLITERS && !flag; i++)
+            {
+                flag = (symb == ARRAY_SPLITTER[i]);
+            }
         }
-    counter++;
 
-    LOG(DEBUG_LVL_1, stream_out, "end while 1\n");
+        LOG(DEBUG_LVL_1, stream_out, "end while 1\n");
 
-    }while (!flag);
+    } while (!flag);
 
     LOG(DEBUG_LVL_1, stream_out, "end while 2\n");
     return counter;

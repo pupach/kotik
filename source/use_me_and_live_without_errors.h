@@ -1,4 +1,4 @@
-#ifndef hhhhh
+#ifndef use_me_live_without_errors.h
 #define hhhhh
 
 
@@ -11,13 +11,13 @@
 #include <assert.h>
 #include <stdarg.h>
 #include "debug_and_logs.h"
-#define assert_perror(errnum, ERROR_CODE)						   \
-  if(!errnum){								           \
+#define assert_perror(errnum, ERROR_CODE)						                                                  \
+  if(!errnum){								                                                                      \
     fprintf(stdout, "%d, %s, %d //-----------------------------------------------------------------------------", \
-            (errnum), __FILE__, __LINE__);\
-     return ERROR_CODE;\
+            (errnum), __FILE__, __LINE__);                                                                        \
+     return ERROR_CODE;                                                                                           \
     }
-
+   // do while.
 
 /**
 all kinds value, WHICH CAN return function as error

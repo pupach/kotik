@@ -8,7 +8,7 @@ static void select_launch_mode(const unsigned argc, const char *argv[]);
 
 
 /**
-Define, in which mode shoube start the program.
+Define, in which mode should we start the program.
 */
 static void select_launch_mode(const unsigned argc, const char *argv[])
 {
@@ -50,11 +50,11 @@ int main(const int argc, const char* argv[])
         read_numbers(coef, DEGREE + 1);
 
         struct quad equ = {};
-        gen_struktur(coef, &equ);
+        gen_struct(coef, &equ);
         solve_equations(&equ);
 
         print_info_about_roots(&equ);
     }
-    close_file_for_debuf();
+    close_file_for_debug();
 }
 
