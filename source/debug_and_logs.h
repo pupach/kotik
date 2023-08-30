@@ -11,24 +11,54 @@
 #include <assert.h>
 #include "use_me_and_live_without_errors.h"
 
-#define LOG(mode, args...)                             \
-    do {                                               \
-    if(mode) {                                         \
+#ifdef DEBUG_MODE
+#define LOG(mode, args...)                                                       \
+    do {                                                                         \
+    if(mode) {                                                                   \
         fprintf(stderr, "%s:%d\t %s\t", __FILE__, __LINE__, __PRETTY_FUNCTION__);\
-        fprintf(args);}                          \
+        fprintf(args);}                                                          \
     } while(0)
+#endif
+
 
 /**
 all kinds value, WHICH CAN HAVE debug
 */
 enum DEBUG_LVL
 {
-    NO_DEBUG = 0,
-    MIN_DEBUG = 1,
-    HIGHT_DEBUG = 2,
-    FILE_DEBUG = 3
+    NO_DEBUG        = 0,
+    MIN_DEBUG       = 1,
+    HIGH_DEBUG     = 2,
+    FILE_DEBUG      = 3
 
 };
+
+
+extern int DEBUG;
+
+
+#ifndef DEBUG_MODE
+#define LOG(mode, args...){}
+#endif
+
+
+#ifdef DEBUG_MODE
+    #define DEBUG_LVL_1 DEBUG>=MIN_DEBUG
+#endif
+
+#ifndef DEBUG_MODE
+#define DEBUG_LVL_1 0
+#endif
+
+#ifdef DEBUG_MODE
+    #define DEBUG_LVL_2 DEBUG>=HIGH_DEBUG
+#endif
+
+
+#ifndef DEBUG_MODE
+#define DEBUG_LVL_2 0
+#endif
+
 
 /**
 MAX SIZE FILE, which user can input
@@ -41,7 +71,7 @@ extern FILE *stream_out;///<Variable that specifies where to output data for the
 
 extern int TEST_MODE; ///< value 1 means that the program is running in test mode and zero is not
 
-extern int DEBUG;
+
 /**
 if #stream_out not equal stdout: close the file, where were writing debug info
 */
@@ -52,5 +82,5 @@ void close_file_for_debuf();
 if #DEBUG equ 2 when programs will write debug info in file
     @params[out] return stream where must be write debug info
 */
-FILE *open_file_for_debug_log();
+void open_file_for_debug_log();
 #endif

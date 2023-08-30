@@ -3,7 +3,7 @@
 
 
 #include <stdlib.h>
-#include <TXLib.h>  // » все, и все, больше ниче не надо, трал€л€л€л€!!!
+#include <TXLib.h>
 #include <stdio.h>
 #include <math.h>
 #include <windows.h>

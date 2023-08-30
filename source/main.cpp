@@ -2,27 +2,25 @@
 #include "quad_equ.h"
 #include "debug_and_logs.h"
 #include "test.h"
-#include "input_or_output_function.h"
+#include "input_or_output.h"
 
 static void select_launch_mode(const unsigned argc, const char *argv[]);
 
 
-
+/**
+Define, in which mode shoube start the program.
+*/
 static void select_launch_mode(const unsigned argc, const char *argv[])
 {
     if (argc > 1)
     {
         for (unsigned i = 1; i < argc; i++)
         {
-            if (strcmp(argv[i], "--t") == 0)
+            if (strcmp(argv[i], "-t") == 0)
             {
-                if ((i + 1) < argc)
-                {
-                    TEST_MODE = (int) argv[i+1];
-                }
-                else{TEST_MODE=1;}
+                TEST_MODE = 1;
             }
-            else if (strcmp(argv[i], "--d") == 0)
+            else if (strcmp(argv[i], "-d") == 0)
             {
                 if ((i + 1) < argc)
                 {
@@ -40,7 +38,7 @@ int main(const int argc, const char* argv[])
 {
     select_launch_mode(argc, argv);
     LOG(DEBUG>=MIN_DEBUG, stdout, "DEBUG = %d", DEBUG);
-    stream_out = open_file_for_debug_log();
+    open_file_for_debug_log();
 
     if (TEST_MODE)
     {
@@ -59,3 +57,4 @@ int main(const int argc, const char* argv[])
     }
     close_file_for_debuf();
 }
+

@@ -1,0 +1,168 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\pupach_MFTI\pupach_atom\kotik\object\kotik.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x751AE6DE в функции ungetwc(). Попытка прочесть данные по адресу 0x0000000A в модуле C:\Windows\System32\msvcrt.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007B18BC (32-bit), Flags: Cmdre0, Thread: 0x41AC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x751AE6DE in C:\Windows\System32\msvcrt.dll: ungetwc()
+# 1 0x751A6800 in C:\Windows\System32\msvcrt.dll: fprintf()
+
+# 2 0x00507D88 in C:\pupach_MFTI\pupach_atom\kotik\object\kotik.exe: clear_buff_input() at C:/pupach_MFTI/pupach_atom/kotik/source/input_or_output_function.cpp (112):
+
+    110:         char symb = getc(stream_in);
+    111: 
+=>  112:         LOG(DEBUG>=HIGHT_DEBUG, stream_out, "symb getc, %s", symb);
+    113: 
+    114:         if (symb == SYMBOL_ENTER)
+
+# 3 0x00507A7B in C:\pupach_MFTI\pupach_atom\kotik\object\kotik.exe: read_number() at C:/pupach_MFTI/pupach_atom/kotik/source/input_or_output_function.cpp (25):
+
+     23:         {
+     24:             int paniman = (*amount_characters);
+=>   25:             int splitters = clear_buff_input(amount_characters);
+     26: 
+     27:             LOG(DEBUG>=MIN_DEBUG, stream_out, " зашли в первый иф");
+
+# 4 0x00507BFA in C:\pupach_MFTI\pupach_atom\kotik\object\kotik.exe: read_numbers() at C:/pupach_MFTI/pupach_atom/kotik/source/input_or_output_function.cpp (75):
+
+     73:     {
+     74:         size_t counter_befor = counter;
+=>   75:         counter = read_number(counter, &box_for_scanf, stream_in, &amount_characters);
+     76:         if (counter > counter_befor)
+     77:         {
+
+# 5 0x0053403D in C:\pupach_MFTI\pupach_atom\kotik\object\kotik.exe: fill_test_data_from_file() at C:/pupach_MFTI/pupach_atom/kotik/source/test.cpp (85):
+
+     83:         LOG(DEBUG>=HIGHT_DEBUG, stream_out, "while step %d begin\n", i);
+     84:         double data_numbers[amount_val_in_test_data];
+=>   85:         flag_EOF = read_numbers(data_numbers, amount_val_in_test_data, stream_in);
+     86: 
+     87:         LOG(DEBUG>=HIGHT_DEBUG, stream_out, "test_do_while 1, %d", flag_EOF);
+
+# 6 0x005343D0 in C:\pupach_MFTI\pupach_atom\kotik\object\kotik.exe: full_test_for_solve_equ() at C:/pupach_MFTI/pupach_atom/kotik/source/test.cpp (150):
+
+    148:     else
+    149:     {
+=>  150:         amount_test = fill_test_data_from_file(all_data);
+    151:     }
+    152:     LOG(DEBUG>=MIN_DEBUG, stream_out, "INPUT_TEST_MODE define\n");
+
+# 7 0x004AFFB9 in C:\pupach_MFTI\pupach_atom\kotik\object\kotik.exe: main() at C:/pupach_MFTI/pupach_atom/kotik/source/main.cpp (47):
+
+     45:     if (TEST_MODE)
+     46:     {
+=>   47:         full_test_for_solve_equ();
+     48:     }
+     49:     else
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 30 2023 12:40:22, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Aug 30 2023 12:53:00
+
+Run file:	C:\pupach_MFTI\pupach_atom\kotik\object\kotik.exe
+Directory:	C:\pupach_MFTI\pupach_atom\kotik
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\pupach_MFTI\pupach_atom\kotik\object\kotik.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x751AE6DE в функции ungetwc(). Попытка прочесть данные по адресу 0x0000000A в модуле C:\Windows\System32\msvcrt.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400], Instance: 0x007B18BC (32-bit), Flags: Cmdre0, Thread: 0x41AC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x751AE6DE in C:\Windows\System32\msvcrt.dll: ungetwc()
+# 1 0x751A6800 in C:\Windows\System32\msvcrt.dll: fprintf()
+
+# 2 0x00507D88 in C:\pupach_MFTI\pupach_atom\kotik\object\kotik.exe: clear_buff_input() at C:/pupach_MFTI/pupach_atom/kotik/source/input_or_output_function.cpp (112):
+
+    110:         char symb = getc(stream_in);
+    111: 
+=>  112:         LOG(DEBUG>=HIGHT_DEBUG, stream_out, "symb getc, %s", symb);
+    113: 
+    114:         if (symb == SYMBOL_ENTER)
+
+# 3 0x00507A7B in C:\pupach_MFTI\pupach_atom\kotik\object\kotik.exe: read_number() at C:/pupach_MFTI/pupach_atom/kotik/source/input_or_output_function.cpp (25):
+
+     23:         {
+     24:             int paniman = (*amount_characters);
+=>   25:             int splitters = clear_buff_input(amount_characters);
+     26: 
+     27:             LOG(DEBUG>=MIN_DEBUG, stream_out, " зашли в первый иф");
+
+# 4 0x00507BFA in C:\pupach_MFTI\pupach_atom\kotik\object\kotik.exe: read_numbers() at C:/pupach_MFTI/pupach_atom/kotik/source/input_or_output_function.cpp (75):
+
+     73:     {
+     74:         size_t counter_befor = counter;
+=>   75:         counter = read_number(counter, &box_for_scanf, stream_in, &amount_characters);
+     76:         if (counter > counter_befor)
+     77:         {
+
+# 5 0x0053403D in C:\pupach_MFTI\pupach_atom\kotik\object\kotik.exe: fill_test_data_from_file() at C:/pupach_MFTI/pupach_atom/kotik/source/test.cpp (85):
+
+     83:         LOG(DEBUG>=HIGHT_DEBUG, stream_out, "while step %d begin\n", i);
+     84:         double data_numbers[amount_val_in_test_data];
+=>   85:         flag_EOF = read_numbers(data_numbers, amount_val_in_test_data, stream_in);
+     86: 
+     87:         LOG(DEBUG>=HIGHT_DEBUG, stream_out, "test_do_while 1, %d", flag_EOF);
+
+# 6 0x005343D0 in C:\pupach_MFTI\pupach_atom\kotik\object\kotik.exe: full_test_for_solve_equ() at C:/pupach_MFTI/pupach_atom/kotik/source/test.cpp (150):
+
+    148:     else
+    149:     {
+=>  150:         amount_test = fill_test_data_from_file(all_data);
+    151:     }
+    152:     LOG(DEBUG>=MIN_DEBUG, stream_out, "INPUT_TEST_MODE define\n");
+
+# 7 0x004AFFB9 in C:\pupach_MFTI\pupach_atom\kotik\object\kotik.exe: main() at C:/pupach_MFTI/pupach_atom/kotik/source/main.cpp (47):
+
+     45:     if (TEST_MODE)
+     46:     {
+=>   47:         full_test_for_solve_equ();
+     48:     }
+     49:     else
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 172, Date: 2023-08-12 11:12:24 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 30 2023 12:40:22, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Aug 30 2023 12:53:00
+
+Run file:	C:\pupach_MFTI\pupach_atom\kotik\object\kotik.exe
+Directory:	C:\pupach_MFTI\pupach_atom\kotik
+
+--------------------------------------------------

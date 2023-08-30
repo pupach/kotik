@@ -1,7 +1,7 @@
 #include "quad_equ.h"
-#include "func_numbers.h"
+#include "comp_double.h"
 #include "debug_and_logs.h"
-#include "input_or_output_function.h"
+#include "input_or_output.h"
 #include "test.h"
 #include "use_me_and_live_without_errors.h"
 
@@ -18,11 +18,11 @@ bool test_for_one_quad_equ(struct quad *equ, double roots[])
     is_bad_ptr(equ);
 
     solve_equations(equ);
+
+    qsort(roots, DEGREE, sizeof(double), comp_double_for_qsort);
+
     for (int i = 0; i < DEGREE; i++)
     {
-        qsort(equ->roots, DEGREE, sizeof(double), comp_double_for_qsort);
-        qsort(roots, DEGREE, sizeof(double), comp_double_for_qsort);
-
         if (compare_double(&(equ->roots[i]), &(roots[i])) != 0)
         {
             printf("тест не прошел подробности в потоке логов");
@@ -38,10 +38,14 @@ FILE * open_file_for_get_test_data()
     const int MAX_SIZE = 100;
     char file_input[MAX_SIZE];
     FILE *stream_in;
+
     printf("введите название файла или stdin если хотите вводить ручками.");
+
     int res_scanf = scanf("%s", &file_input);
     stream_in = fopen(file_input, "r");
+
     LOG(DEBUG>=MIN_DEBUG, stream_out, "open_file_for_get_test_data begin %d\n", stream_in == NULL);
+
     if (stream_in == NULL)
     {
         printf("We cant find this file");
@@ -76,16 +80,16 @@ int fill_test_data_from_file(struct Test_data all_data[])
 
     do
     {
-        LOG(DEBUG>=HIGHT_DEBUG, stream_out, "while step %d begin\n", i);
+        LOG(DEBUG_LVL_2, stream_out, "while step %d begin\n", i);
         double data_numbers[amount_val_in_test_data];
         flag_EOF = read_numbers(data_numbers, amount_val_in_test_data, stream_in);
 
-        LOG(DEBUG>=HIGHT_DEBUG, stream_out, "test_do_while 1, %d", flag_EOF);
+        LOG(DEBUG_LVL_2, stream_out, "test_do_while 1, %d", flag_EOF);
 
         char name[SIZE_ARR(all_data[0].name)];
         flag_EOF = fscanf(stream_in, "%s", &name);
 
-        LOG(DEBUG>=HIGHT_DEBUG, stream_out, "test_do_while 2, %d, %s", flag_EOF, name);
+        LOG(DEBUG_LVL_2, stream_out, "test_do_while 2, %d, %s", flag_EOF, name);
 
         if ((int) flag_EOF == -1) break;
 
@@ -98,11 +102,13 @@ int fill_test_data_from_file(struct Test_data all_data[])
         }
         else
         {
-            all_data[i].am_roots = data_numbers[DEGREE*2+1];
+            all_data[i].am_roots = (int)data_numbers[DEGREE*2+1];
         }
 
         strncpy(all_data[i].name, name, SIZE_ARR(all_data[0].name));
-        LOG(DEBUG==HIGHT_DEBUG, stream_out, "while step %d end\n", i);
+
+        LOG(DEBUG==HIGH_DEBUG, stream_out, "while step %d end\n", i);
+
         i++;
 
     }while(flag_EOF);
@@ -116,7 +122,7 @@ int fill_test_data_from_file(struct Test_data all_data[])
 }
 
 
-int fill_test_data_with_code(struct Test_data all_data[])
+int fill_test_data_with_code(struct Test_data all_data)
 {
     LOG(DEBUG>=MIN_DEBUG, stream_out, "fill_test_data_with_code begin\n");
 

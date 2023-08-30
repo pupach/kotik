@@ -1,14 +1,14 @@
-#include "mne_len_nazuvat_atot_file.h"
+#include "use_me_and_live_without_errors.h"
 #include "quad_equ.h"
 #include "debug_and_logs.h"
 #include "test.h"
 #include "input_or_output_function.h"
 
-void select_launch_mode(const unsigned argc, const char *argv[]);
+static void select_launch_mode(const unsigned argc, const char *argv[]);
 
 
 
-void select_launch_mode(const unsigned argc, const char *argv[])
+static void select_launch_mode(const unsigned argc, const char *argv[])
 {
     if (argc > 1)
     {
@@ -35,11 +35,12 @@ void select_launch_mode(const unsigned argc, const char *argv[])
     }
 }
 
+#endif
 
 int main(const int argc, const char* argv[])
 {
     select_launch_mode(argc, argv);
-    LOG(1, stdout, "DEBUG = %d", DEBUG);
+    LOG(DEBUG>=MIN_DEBUG, stdout, "DEBUG = %d", DEBUG);
     stream_out = open_file_for_debug_log();
 
     if (TEST_MODE)
@@ -59,3 +60,4 @@ int main(const int argc, const char* argv[])
     }
     close_file_for_debuf();
 }
+

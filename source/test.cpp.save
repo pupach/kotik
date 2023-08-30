@@ -1,13 +1,14 @@
 #include "quad_equ.h"
-#include "func_numbers.h"
+#include "comp_double.h"
 #include "debug_and_logs.h"
 #include "input_or_output_function.h"
 #include "test.h"
-#include "mne_len_nazuvat_atot_file.h"
+#include "use_me_and_live_without_errors.h"
 
 
 const int MAX_SIZE_ARRAY_OF_TEST = 100;
 int INPUT_TEST_MODE = 0;
+int TEST_MODE=0;
 
 
 
@@ -17,11 +18,11 @@ bool test_for_one_quad_equ(struct quad *equ, double roots[])
     is_bad_ptr(equ);
 
     solve_equations(equ);
+
+    qsort(roots, DEGREE, sizeof(double), comp_double_for_qsort);
+
     for (int i = 0; i < DEGREE; i++)
     {
-        qsort(equ->roots, DEGREE, sizeof(double), comp_double_for_qsort);
-        qsort(roots, DEGREE, sizeof(double), comp_double_for_qsort);
-
         if (compare_double(&(equ->roots[i]), &(roots[i])) != 0)
         {
             printf("тест не прошел подробности в потоке логов");
@@ -37,10 +38,14 @@ FILE * open_file_for_get_test_data()
     const int MAX_SIZE = 100;
     char file_input[MAX_SIZE];
     FILE *stream_in;
-    printf("введите название файла ");
+
+    printf("введите название файла или stdin если хотите вводить ручками.");
+
     int res_scanf = scanf("%s", &file_input);
     stream_in = fopen(file_input, "r");
+
     LOG(DEBUG>=MIN_DEBUG, stream_out, "open_file_for_get_test_data begin %d\n", stream_in == NULL);
+
     if (stream_in == NULL)
     {
         printf("We cant find this file");

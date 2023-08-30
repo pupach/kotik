@@ -1,8 +1,10 @@
 #include "quad_equ.h"
-#include "func_numbers.h"
+#include "comp_double.h"
 #include "debug_and_logs.h"
-#include "input_or_output_function.h"
+#include "input_or_output.h"
 #include "use_me_and_live_without_errors.h"
+
+
 
 
 static enum CODE_ERRORS find_roots_quad_equ(struct quad *equ);
@@ -17,79 +19,67 @@ enum CODE_ERRORS solve_equations(struct quad *equ)
     is_bad_ptr(equ);
     assert_perror(!isnan(equ->a), VAL_NAN);assert_perror(!isnan(equ->b), VAL_NAN);
     assert_perror(!isnan(equ->c), VAL_NAN);
+    LOG(DEBUG_LVL_1, stream_out, "Определяем степень уравнения\n ewecwce %d, %d \n",
+                (compare_double(&equ->a, &for_compare_double) == 0),
+                (compare_double(&equ->b, &for_compare_double) == 0));
 
-    LOG(DEBUG>=MIN_DEBUG, stream_out, "Определяем степень уравнения\n ewecwce %d, %d \n",
-                (compare_double(&(equ->a), &for_compare_double) == 0),
-                (compare_double(&(equ->b), &for_compare_double) == 0));
 
-
-    if ((is_double_zero(&(equ->a)) == 0) &&
-        (is_double_zero(&(equ->b)) == 0))
-    {
-
-        LOG(DEBUG>=MIN_DEBUG, stream_out, "Степень 0\n");
-
-        inf_or_not_amount_roots(equ);
-    }
-    else if (is_double_zero(&(equ->a)) == 0)
+    if (is_double_zero(&equ->a) == 0)
     {
 
         LOG(DEBUG>=MIN_DEBUG, stream_out, "Степень 1\n");
 
         find_roots_lin_equ(equ);
     }
+
     else
     {
 
-        LOG(DEBUG>=MIN_DEBUG, stream_out, "Степень 2\n");
+        LOG(DEBUG_LVL_1, stream_out, "Степень 2\n");
 
         find_roots_quad_equ(equ);
     }
 
-    LOG(DEBUG>=MIN_DEBUG, stream_out, "Определили степень\n");
-    LOG(DEBUG>=MIN_DEBUG, stream_out, "asserts %d, %d\n", equ->amount_roots, (equ->amount_roots != Poison_value));
+    qsort(equ->roots, DEGREE, sizeof(double), comp_double_for_qsort);
+
+    LOG(DEBUG_LVL_1, stream_out, "Определили степень\n");
+    LOG(DEBUG_LVL_1, stream_out, "asserts %d, %d\n", equ->amount_roots, (equ->amount_roots != Poison_value));
     assert_perror(!(isnan(equ->amount_roots)), VAL_NAN);
-    assert_perror(((equ->amount_roots) != Poison_value), VAL_POISON);
+    assert_perror((equ->amount_roots != Poison_value), VAL_POISON);
 
     return ALL_GOOD;
 }
 
 static enum CODE_ERRORS find_roots_lin_equ(struct quad *equ)
 {
+    LOG(DEBUG_LVL_1, stream_out, " begin\n");
     is_bad_ptr(equ);
-    LOG(DEBUG>=MIN_DEBUG, stream_out, " begin\n");
-    assert_perror(is_double_zero(&(equ->b))!=0, VAL_ZERO);
-    assert_perror(is_double_zero(&(equ->a))==0, VAL_ZERO);
+    assert_perror(is_double_zero(&equ->a)==0, VAL_ZERO);
 
-    equ->roots[0] = -(equ->c)/(equ->b);
-    equ->amount_roots = 1;
-
-    LOG(DEBUG>=MIN_DEBUG, stream_out, " end\n");
-    return ALL_GOOD;
-}
-
-
-static enum CODE_ERRORS inf_or_not_amount_roots(struct quad *equ)
-{
-    is_bad_ptr(equ);
-
-    assert_perror(is_double_zero(&(equ->a))==0, VAL_ZERO);
-    assert_perror(is_double_zero(&(equ->b))==0, VAL_ZERO);
-
-    LOG(DEBUG>=MIN_DEBUG, stream_out, " begin\n");
-
-    if (is_double_zero((&(equ->c))) == 0)
+    if (is_double_zero(&equ->b) != 0)
     {
-        equ->amount_roots = AMOUNT_ROOTS_INF;
-        equ->roots[0] = INFINITY;
-        equ->roots[1] = INFINITY;
+        assert_perror(is_double_zero(&equ->b)!=0, VAL_ZERO);
+
+        equ->roots[0] = -equ->c/equ->b;
+        equ->amount_roots = 1;
     }
     else
     {
-        equ->amount_roots = 0;
+        assert_perror(is_double_zero(&equ->b)==0, VAL_ZERO);
+
+        if (is_double_zero((&equ->c)) == 0)
+        {
+            equ->amount_roots = AMOUNT_ROOTS_INF;
+            equ->roots[0] = INFINITY;
+            equ->roots[1] = INFINITY;
+        }
+        else
+        {
+            equ->amount_roots = 0;
+        }
     }
 
-    LOG(DEBUG>=HIGHT_DEBUG, stream_out, " end\n");
+    LOG(DEBUG_LVL_2, stream_out, " end\n");
     return ALL_GOOD;
 }
 
@@ -97,23 +87,23 @@ static enum CODE_ERRORS inf_or_not_amount_roots(struct quad *equ)
 static enum CODE_ERRORS find_roots_quad_equ(struct quad *equ)
 {
 
-    LOG(DEBUG>=MIN_DEBUG, stream_out, " begin\n");
+    LOG(DEBUG_LVL_1, stream_out, " begin\n");
     is_bad_ptr(equ);
 
     printf("Начинаем поиск корней\n");
 
-    equ->dis = (equ->b)*(equ->b) - 4*(equ->a)*(equ->c);
-    int dis_and_zero = is_double_zero(&(equ->dis));
+    equ->dis = equ->b*equ->b - 4*equ->a*equ->c;
+    int dis_and_zero = is_double_zero(&equ->dis);
     if (dis_and_zero == 0)
     {
         equ->amount_roots = 1;
-        equ->roots[0] = (-(equ->b))/2./(equ->a);
+        equ->roots[0] = (-equ->b)/equ->a/2.;
     }
     else if (dis_and_zero == 1)
     {
         double dis_sqrt = sqrt(equ->dis);
-        equ->roots[0] = (-(equ->b) + dis_sqrt)/(double)2/(equ->a);
-        equ->roots[1] = (-(equ->b) - dis_sqrt)/(double)2/(equ->a);
+        equ->roots[0] = (-equ->b + dis_sqrt)/equ->a/2.;
+        equ->roots[1] = (-equ->b - dis_sqrt)/equ->a/2.;
         equ->amount_roots = 2;
     }
     else
@@ -122,7 +112,7 @@ static enum CODE_ERRORS find_roots_quad_equ(struct quad *equ)
     }
     printf("Корни найдены\n");
 
-    LOG(DEBUG>=MIN_DEBUG, stream_out, " begin\n");
+    LOG(DEBUG_LVL_1, stream_out, " begin\n");
     return ALL_GOOD;
 
 }
@@ -131,7 +121,7 @@ static enum CODE_ERRORS find_roots_quad_equ(struct quad *equ)
 enum CODE_ERRORS print_info_about_roots(const struct quad *equ)
 {
     is_bad_ptr(equ);
-    LOG(DEBUG>=MIN_DEBUG, stream_out, " begin\n");
+    LOG(DEBUG_LVL_1, stream_out, " begin\n");
 
     switch(equ->amount_roots)
     {
@@ -152,7 +142,7 @@ enum CODE_ERRORS print_info_about_roots(const struct quad *equ)
             break;
     }
 
-    LOG(DEBUG>=MIN_DEBUG, stream_out, " end\n");
+    LOG(DEBUG_LVL_1, stream_out, " end\n");
     if (TEST_MODE)
     {
         fprintf(stream_out, "Коэфиценты %lf, %lf, %lf\n Дискриминант %lf\nкорни %lf, %lf\n"
@@ -166,7 +156,7 @@ enum CODE_ERRORS print_info_about_roots(const struct quad *equ)
 enum CODE_ERRORS gen_struktur(double coef[DEGREE+1], struct quad *equ)
 {
     is_bad_ptr(equ);
-    LOG(DEBUG>=MIN_DEBUG, stream_out, " begin\n");
+    LOG(DEBUG_LVL_1, stream_out, " begin\n");
 
     equ->a = coef[0];
     equ->b = coef[1];
@@ -178,7 +168,7 @@ enum CODE_ERRORS gen_struktur(double coef[DEGREE+1], struct quad *equ)
     {
         equ->roots[i] = NAN;
     }
-    LOG(DEBUG>=MIN_DEBUG, stream_out, " end\n");
+    LOG(DEBUG_LVL_1, stream_out, " end\n");
     return ALL_GOOD;
 }
 
