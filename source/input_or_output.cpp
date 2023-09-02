@@ -7,7 +7,7 @@
 
 const char ARRAY_SPLITTER[SPLITERS_LEN] = {' ', '\t', ','};
 
-size_t read_number(size_t counter, double * box_for_scanf, FILE *stream_in, int *amount_characters)
+size_t read_number(size_t counter, double * box_for_scanf, FILE *stream_in, int *amt_chars_from_begin_line)
 {
         int jesttttt = 0; // from ded
 
@@ -16,7 +16,7 @@ size_t read_number(size_t counter, double * box_for_scanf, FILE *stream_in, int 
         int amount_input = 0;
 
         fscanf(stream_in, " %n", &amount_input);
-        (*amount_characters) += amount_input;
+        (*amt_chars_from_begin_line) += amount_input;
 
         jesttttt = fscanf(stream_in, "%lf%n", box_for_scanf, &amount_input);
 
@@ -25,22 +25,22 @@ size_t read_number(size_t counter, double * box_for_scanf, FILE *stream_in, int 
 
         if (jesttttt > 0)
         {
-            int paniman = (*amount_characters);
-            int splitters = clear_buff_input(amount_characters, stream_in);
+            int rem_for_print_paniman = (*amt_chars_from_begin_line);
+            int splitters = clear_buff_input(amt_chars_from_begin_line, stream_in);
 
             LOG(DEBUG_LVL_1, stream_out, " зашли в первый иф");
 
             if ((splitters == 1))
             {
-                if ((*amount_characters) != 0)
+                if ((*amt_chars_from_begin_line) != 0)
                 {
-                    (*amount_characters) += amount_input;
+                    (*amt_chars_from_begin_line) += amount_input;
                 }
                 return(counter+1);
             }
             else
             {
-                if(!(TEST_MODE or DEBUG)) print_panimana(paniman);
+                if(!(TEST_MODE or DEBUG)) print_panimana(rem_for_print_paniman);
                 return counter;
             }
 
@@ -53,7 +53,7 @@ size_t read_number(size_t counter, double * box_for_scanf, FILE *stream_in, int 
         else
         {
             double for_result;
-            double cod_ret = check_about_NAN_and_INF(&for_result, amount_characters , stream_in);
+            double cod_ret = check_about_NAN_and_INF(&for_result, amt_chars_from_begin_line , stream_in);
 
             if (cod_ret == false)
             {
@@ -67,7 +67,7 @@ size_t read_number(size_t counter, double * box_for_scanf, FILE *stream_in, int 
 
 bool read_numbers(double coef[], const size_t size_coef, FILE *stream_in)
 {
-    int amount_characters = 0;
+    int amt_chars_from_begin_line = 0;
     int counter = 0;
     double box_for_scanf = NAN;
 
@@ -76,7 +76,7 @@ bool read_numbers(double coef[], const size_t size_coef, FILE *stream_in)
     while(counter < size_coef)
     {
         size_t counter_befor = counter;
-        counter = read_number(counter, &box_for_scanf, stream_in, &amount_characters);
+        counter = read_number(counter, &box_for_scanf, stream_in, &amt_chars_from_begin_line);
         if (counter > counter_befor)
         {
             if(!TEST_MODE){printf("чисел получено %d %lf\n", counter, box_for_scanf);}
@@ -100,7 +100,7 @@ bool read_numbers(double coef[], const size_t size_coef, FILE *stream_in)
 }
 
 
-int clear_buff_input(int *amount_characters, FILE *stream_in)
+int clear_buff_input(int *amt_chars_from_begin_line, FILE *stream_in)
 {
     LOG(DEBUG_LVL_1, stream_out, "begin while 1\n");
 
@@ -110,7 +110,7 @@ int clear_buff_input(int *amount_characters, FILE *stream_in)
     int counter = 0;
     do
     {
-        (*amount_characters)+=1;
+        (*amt_chars_from_begin_line)+=1;
 
         char symb = getc(stream_in);
 
@@ -119,12 +119,12 @@ int clear_buff_input(int *amount_characters, FILE *stream_in)
         counter++;
         if (symb == SYMBOL_ENTER)
         {
-            (*amount_characters) = 0;
+            (*amt_chars_from_begin_line) = 0;
             break;
         }
         else
         {
-            for (int i = 0; i < SPLITERS && !flag; i++)
+            for (int i = 0; i < SPLITERS_LEN && !flag; i++)
             {
                 flag = (symb == ARRAY_SPLITTER[i]);
             }
@@ -138,22 +138,22 @@ int clear_buff_input(int *amount_characters, FILE *stream_in)
     return counter;
 }
 
-bool check_about_NAN_and_INF(double* result, int *amount_characters, FILE *stream_in)
+bool check_about_NAN_and_INF(double* result, int *amt_chars_from_begin_line, FILE *stream_in)
 {
     is_bad_ptr(stream_in);
 
     int am_input = 0;
-    int print_panimana_rem = (*amount_characters);
+    int rem_for_print_paniman = (*amt_chars_from_begin_line);
     char str[SIZE_ARR(inf)] = {};
     int res = fscanf(stream_in, "%10s%n", &str, &am_input);
 
-    (*amount_characters) += am_input;
+    (*amt_chars_from_begin_line) += am_input;
 
     LOG(DEBUG>=MIN_DEBUG, stream_out, " res %d\n str %s \n", res, str);
 
     if (res == 0)
     {
-        clear_buff_input(amount_characters, stream_in);
+        clear_buff_input(amt_chars_from_begin_line, stream_in);
     }
     else if(res == 1)
     {
@@ -172,15 +172,15 @@ bool check_about_NAN_and_INF(double* result, int *amount_characters, FILE *strea
             return false;
         }
     }
-    (*amount_characters) = 0;
-    if(!TEST_MODE)print_panimana(print_panimana_rem);
+    (*amt_chars_from_begin_line) = 0;
+    if(!TEST_MODE)print_panimana(rem_for_print_paniman);
     return true;
 }
 
-void print_panimana(int print_panimana_rem)
+void print_panimana(int rem_for_print_paniman)
 {
     printf("\n");
-    for (int j = 0; j<print_panimana_rem; j++)
+    for (int j = 0; j<rem_for_print_paniman; j++)
     {
         printf(" ");
     }

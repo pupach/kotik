@@ -12,11 +12,11 @@
 #include "use_me_and_live_without_errors.h"
 
 #ifdef DEBUG_MODE
-#define LOG(mode, args...)                                                       \
+#define LOG(mode, stream_out, args...)                                                         \
     do {                                                                         \
     if(mode) {                                                                   \
-        fprintf(stderr, "%s:%d\t %s\t", __FILE__, __LINE__, __PRETTY_FUNCTION__);\
-        fprintf(args);}                                                          \
+        fprintf(stream_out, "%s:%d\t %s\t", __FILE__, __LINE__, __PRETTY_FUNCTION__);\
+        fprintf(stream_out, args);}                                                          \
     } while(0)
 #endif
 
@@ -28,7 +28,7 @@ enum DEBUG_LVL
 {
     NO_DEBUG        = 0,
     MIN_DEBUG       = 1,
-    HIGH_DEBUG     = 2,
+    HIGH_DEBUG      = 2,
     FILE_DEBUG      = 3
 
 };
@@ -75,7 +75,7 @@ extern int TEST_MODE; ///< value 1 means that the program is running in test mod
 /**
 if #stream_out not equal stdout: close the file, where were writing debug info
 */
-void close_file_for_debuf();
+void close_file_for_debug();
 
 /**
     @brief define which stream_out will use programs

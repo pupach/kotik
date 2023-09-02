@@ -10,10 +10,10 @@
 
 const char inf[]="INFINITY";
 
-const int SPLITERS = 4;///<Define Size of #ARRAY_SPLITTER
+const int SPLITERS_LEN = 4;///<Define Size of #ARRAY_SPLITTER
 
 
-extern const char ARRAY_SPLITTER[SPLITERS];///< Array with #SPLITERS for the #clear_buff_input, which defines the end of the word
+extern const char ARRAY_SPLITTER[SPLITERS_LEN];///< Array with #SPLITERS_LEN for the #clear_buff_input, which defines the end of the word
 
 
 const char SYMBOL_ENTER = '\n';
@@ -32,12 +32,12 @@ bool read_numbers(double coef[], const size_t size_coef, FILE *stream_in = stdin
     delete symbols to next word(define when next word begin by #ARRAY_SPLITTER)
     @params[i] Stream of input, which must be clean
 */
-int clear_buff_input(int *amount_characters, FILE *stream_in);
+int clear_buff_input(int *amt_chars_from_begin_line, FILE *stream_in);
 /*!
     @brief Define next word (NAN or INFINITY) or not
     @params[i] Stream of input, which must be clean
 */
-bool check_about_NAN_and_INF(double* result, int *amount_characters, FILE *stream_in);
+bool check_about_NAN_and_INF(double* result, int *amt_chars_from_begin_line, FILE *stream_in);
 
 void print_panimana(int print_panimana_rem);
 #endif

@@ -1,0 +1,118 @@
+source/test.cpp:136	 void full_test_for_solve_equ()	full_test_for_solve_equ begin
+source/test.cpp:68	 int fill_test_data_from_file(Test_data*)	fill_test_data_with_fill begin
+source/test.cpp:45	 FILE* open_file_for_get_test_data()	open_file_for_get_test_data begin 0
+source/test.cpp:60	 FILE* open_file_for_get_test_data()	stream_in is file begin
+source/test.cpp:77	 int fill_test_data_from_file(Test_data*)	stream_in define
+source/test.cpp:81	 int fill_test_data_from_file(Test_data*)	while step 0 begin
+source/input_or_output.cpp:14	 size_t read_number(size_t, double*, FILE*, int*)	while begin, 0source/input_or_output.cpp:23	 size_t read_number(size_t, double*, FILE*, int*)	JEEEST 1, 1.000000source/input_or_output.cpp:24	 size_t read_number(size_t, double*, FILE*, int*)	fscanf,  box_for_scanf 1.000000
+source/input_or_output.cpp:105	 int clear_buff_input(int*, FILE*)	begin while 1
+source/input_or_output.cpp:117	 int clear_buff_input(int*, FILE*)	symb getc,  source/input_or_output.cpp:133	 int clear_buff_input(int*, FILE*)	end while 1
+source/input_or_output.cpp:137	 int clear_buff_input(int*, FILE*)	end while 2
+source/input_or_output.cpp:31	 size_t read_number(size_t, double*, FILE*, int*)	 зашли в первый ифsource/input_or_output.cpp:14	 size_t read_number(size_t, double*, FILE*, int*)	while begin, 1source/input_or_output.cpp:23	 size_t read_number(size_t, double*, FILE*, int*)	JEEEST 1, 2.000000source/input_or_output.cpp:24	 size_t read_number(size_t, double*, FILE*, int*)	fscanf,  box_for_scanf 2.000000
+source/input_or_output.cpp:105	 int clear_buff_input(int*, FILE*)	begin while 1
+source/input_or_output.cpp:117	 int clear_buff_input(int*, FILE*)	symb getc,  source/input_or_output.cpp:133	 int clear_buff_input(int*, FILE*)	end while 1
+source/input_or_output.cpp:137	 int clear_buff_input(int*, FILE*)	end while 2
+source/input_or_output.cpp:31	 size_t read_number(size_t, double*, FILE*, int*)	 зашли в первый ифsource/input_or_output.cpp:14	 size_t read_number(size_t, double*, FILE*, int*)	while begin, 2source/input_or_output.cpp:23	 size_t read_number(size_t, double*, FILE*, int*)	JEEEST 1, 3.000000source/input_or_output.cpp:24	 size_t read_number(size_t, double*, FILE*, int*)	fscanf,  box_for_scanf 3.000000
+source/input_or_output.cpp:105	 int clear_buff_input(int*, FILE*)	begin while 1
+source/input_or_output.cpp:117	 int clear_buff_input(int*, FILE*)	symb getc,  source/input_or_output.cpp:133	 int clear_buff_input(int*, FILE*)	end while 1
+source/input_or_output.cpp:137	 int clear_buff_input(int*, FILE*)	end while 2
+source/input_or_output.cpp:31	 size_t read_number(size_t, double*, FILE*, int*)	 зашли в первый ифsource/input_or_output.cpp:14	 size_t read_number(size_t, double*, FILE*, int*)	while begin, 3source/input_or_output.cpp:23	 size_t read_number(size_t, double*, FILE*, int*)	JEEEST 0, 3.000000source/input_or_output.cpp:24	 size_t read_number(size_t, double*, FILE*, int*)	fscanf,  box_for_scanf 3.000000
+source/input_or_output.cpp:152	 bool check_about_NAN_and_INF(double*, int*, FILE*)	 res 1
+ str NAN 
+source/input_or_output.cpp:162	 bool check_about_NAN_and_INF(double*, int*, FILE*)	 return NAN 
+source/input_or_output.cpp:14	 size_t read_number(size_t, double*, FILE*, int*)	while begin, 4source/input_or_output.cpp:23	 size_t read_number(size_t, double*, FILE*, int*)	JEEEST 0, 1.#QNAN0source/input_or_output.cpp:24	 size_t read_number(size_t, double*, FILE*, int*)	fscanf,  box_for_scanf 1.#QNAN0
+source/input_or_output.cpp:152	 bool check_about_NAN_and_INF(double*, int*, FILE*)	 res 1
+ str NAN 
+source/input_or_output.cpp:162	 bool check_about_NAN_and_INF(double*, int*, FILE*)	 return NAN 
+source/input_or_output.cpp:14	 size_t read_number(size_t, double*, FILE*, int*)	while begin, 5source/input_or_output.cpp:23	 size_t read_number(size_t, double*, FILE*, int*)	JEEEST 1, 0.000000source/input_or_output.cpp:24	 size_t read_number(size_t, double*, FILE*, int*)	fscanf,  box_for_scanf 0.000000
+source/input_or_output.cpp:105	 int clear_buff_input(int*, FILE*)	begin while 1
+source/input_or_output.cpp:117	 int clear_buff_input(int*, FILE*)	symb getc,  source/input_or_output.cpp:133	 int clear_buff_input(int*, FILE*)	end while 1
+source/input_or_output.cpp:137	 int clear_buff_input(int*, FILE*)	end while 2
+source/input_or_output.cpp:31	 size_t read_number(size_t, double*, FILE*, int*)	 зашли в первый ифsource/test.cpp:85	 int fill_test_data_from_file(Test_data*)	test_do_while 1, 1source/test.cpp:90	 int fill_test_data_from_file(Test_data*)	test_do_while 2, 1, "1"source/test.cpp:81	 int fill_test_data_from_file(Test_data*)	while step 1 begin
+source/input_or_output.cpp:14	 size_t read_number(size_t, double*, FILE*, int*)	while begin, 0source/input_or_output.cpp:23	 size_t read_number(size_t, double*, FILE*, int*)	JEEEST 1, 0.000000source/input_or_output.cpp:24	 size_t read_number(size_t, double*, FILE*, int*)	fscanf,  box_for_scanf 0.000000
+source/input_or_output.cpp:105	 int clear_buff_input(int*, FILE*)	begin while 1
+source/input_or_output.cpp:117	 int clear_buff_input(int*, FILE*)	symb getc,  source/input_or_output.cpp:133	 int clear_buff_input(int*, FILE*)	end while 1
+source/input_or_output.cpp:137	 int clear_buff_input(int*, FILE*)	end while 2
+source/input_or_output.cpp:31	 size_t read_number(size_t, double*, FILE*, int*)	 зашли в первый ифsource/input_or_output.cpp:14	 size_t read_number(size_t, double*, FILE*, int*)	while begin, 1source/input_or_output.cpp:23	 size_t read_number(size_t, double*, FILE*, int*)	JEEEST 1, 0.000000source/input_or_output.cpp:24	 size_t read_number(size_t, double*, FILE*, int*)	fscanf,  box_for_scanf 0.000000
+source/input_or_output.cpp:105	 int clear_buff_input(int*, FILE*)	begin while 1
+source/input_or_output.cpp:117	 int clear_buff_input(int*, FILE*)	symb getc,  source/input_or_output.cpp:133	 int clear_buff_input(int*, FILE*)	end while 1
+source/input_or_output.cpp:137	 int clear_buff_input(int*, FILE*)	end while 2
+source/input_or_output.cpp:31	 size_t read_number(size_t, double*, FILE*, int*)	 зашли в первый ифsource/input_or_output.cpp:14	 size_t read_number(size_t, double*, FILE*, int*)	while begin, 2source/input_or_output.cpp:23	 size_t read_number(size_t, double*, FILE*, int*)	JEEEST 1, 0.000000source/input_or_output.cpp:24	 size_t read_number(size_t, double*, FILE*, int*)	fscanf,  box_for_scanf 0.000000
+source/input_or_output.cpp:105	 int clear_buff_input(int*, FILE*)	begin while 1
+source/input_or_output.cpp:117	 int clear_buff_input(int*, FILE*)	symb getc,  source/input_or_output.cpp:133	 int clear_buff_input(int*, FILE*)	end while 1
+source/input_or_output.cpp:137	 int clear_buff_input(int*, FILE*)	end while 2
+source/input_or_output.cpp:31	 size_t read_number(size_t, double*, FILE*, int*)	 зашли в первый ифsource/input_or_output.cpp:14	 size_t read_number(size_t, double*, FILE*, int*)	while begin, 3source/input_or_output.cpp:23	 size_t read_number(size_t, double*, FILE*, int*)	JEEEST 0, 0.000000source/input_or_output.cpp:24	 size_t read_number(size_t, double*, FILE*, int*)	fscanf,  box_for_scanf 0.000000
+source/input_or_output.cpp:152	 bool check_about_NAN_and_INF(double*, int*, FILE*)	 res 1
+ str INFINITY 
+source/input_or_output.cpp:169	 bool check_about_NAN_and_INF(double*, int*, FILE*)	 return INFINITY 
+source/input_or_output.cpp:14	 size_t read_number(size_t, double*, FILE*, int*)	while begin, 4source/input_or_output.cpp:23	 size_t read_number(size_t, double*, FILE*, int*)	JEEEST 0, 1.#INF00source/input_or_output.cpp:24	 size_t read_number(size_t, double*, FILE*, int*)	fscanf,  box_for_scanf 1.#INF00
+source/input_or_output.cpp:152	 bool check_about_NAN_and_INF(double*, int*, FILE*)	 res 1
+ str INFINITY 
+source/input_or_output.cpp:169	 bool check_about_NAN_and_INF(double*, int*, FILE*)	 return INFINITY 
+source/input_or_output.cpp:14	 size_t read_number(size_t, double*, FILE*, int*)	while begin, 5source/input_or_output.cpp:23	 size_t read_number(size_t, double*, FILE*, int*)	JEEEST 1, -1.000000source/input_or_output.cpp:24	 size_t read_number(size_t, double*, FILE*, int*)	fscanf,  box_for_scanf -1.000000
+source/input_or_output.cpp:105	 int clear_buff_input(int*, FILE*)	begin while 1
+source/input_or_output.cpp:117	 int clear_buff_input(int*, FILE*)	symb getc,  source/input_or_output.cpp:133	 int clear_buff_input(int*, FILE*)	end while 1
+source/input_or_output.cpp:137	 int clear_buff_input(int*, FILE*)	end while 2
+source/input_or_output.cpp:31	 size_t read_number(size_t, double*, FILE*, int*)	 зашли в первый ифsource/test.cpp:85	 int fill_test_data_from_file(Test_data*)	test_do_while 1, 1source/test.cpp:90	 int fill_test_data_from_file(Test_data*)	test_do_while 2, 1, "2"source/test.cpp:81	 int fill_test_data_from_file(Test_data*)	while step 2 begin
+source/input_or_output.cpp:14	 size_t read_number(size_t, double*, FILE*, int*)	while begin, 0source/input_or_output.cpp:23	 size_t read_number(size_t, double*, FILE*, int*)	JEEEST 1, 1.000000source/input_or_output.cpp:24	 size_t read_number(size_t, double*, FILE*, int*)	fscanf,  box_for_scanf 1.000000
+source/input_or_output.cpp:105	 int clear_buff_input(int*, FILE*)	begin while 1
+source/input_or_output.cpp:117	 int clear_buff_input(int*, FILE*)	symb getc,  source/input_or_output.cpp:133	 int clear_buff_input(int*, FILE*)	end while 1
+source/input_or_output.cpp:137	 int clear_buff_input(int*, FILE*)	end while 2
+source/input_or_output.cpp:31	 size_t read_number(size_t, double*, FILE*, int*)	 зашли в первый ифsource/input_or_output.cpp:14	 size_t read_number(size_t, double*, FILE*, int*)	while begin, 1source/input_or_output.cpp:23	 size_t read_number(size_t, double*, FILE*, int*)	JEEEST 1, 5.000000source/input_or_output.cpp:24	 size_t read_number(size_t, double*, FILE*, int*)	fscanf,  box_for_scanf 5.000000
+source/input_or_output.cpp:105	 int clear_buff_input(int*, FILE*)	begin while 1
+source/input_or_output.cpp:117	 int clear_buff_input(int*, FILE*)	symb getc,  source/input_or_output.cpp:133	 int clear_buff_input(int*, FILE*)	end while 1
+source/input_or_output.cpp:137	 int clear_buff_input(int*, FILE*)	end while 2
+source/input_or_output.cpp:31	 size_t read_number(size_t, double*, FILE*, int*)	 зашли в первый ифsource/input_or_output.cpp:14	 size_t read_number(size_t, double*, FILE*, int*)	while begin, 2source/input_or_output.cpp:23	 size_t read_number(size_t, double*, FILE*, int*)	JEEEST 1, 4.000000source/input_or_output.cpp:24	 size_t read_number(size_t, double*, FILE*, int*)	fscanf,  box_for_scanf 4.000000
+source/input_or_output.cpp:105	 int clear_buff_input(int*, FILE*)	begin while 1
+source/input_or_output.cpp:117	 int clear_buff_input(int*, FILE*)	symb getc,  source/input_or_output.cpp:133	 int clear_buff_input(int*, FILE*)	end while 1
+source/input_or_output.cpp:137	 int clear_buff_input(int*, FILE*)	end while 2
+source/input_or_output.cpp:31	 size_t read_number(size_t, double*, FILE*, int*)	 зашли в первый ифsource/input_or_output.cpp:14	 size_t read_number(size_t, double*, FILE*, int*)	while begin, 3source/input_or_output.cpp:23	 size_t read_number(size_t, double*, FILE*, int*)	JEEEST 1, -1.000000source/input_or_output.cpp:24	 size_t read_number(size_t, double*, FILE*, int*)	fscanf,  box_for_scanf -1.000000
+source/input_or_output.cpp:105	 int clear_buff_input(int*, FILE*)	begin while 1
+source/input_or_output.cpp:117	 int clear_buff_input(int*, FILE*)	symb getc,  source/input_or_output.cpp:133	 int clear_buff_input(int*, FILE*)	end while 1
+source/input_or_output.cpp:137	 int clear_buff_input(int*, FILE*)	end while 2
+source/input_or_output.cpp:31	 size_t read_number(size_t, double*, FILE*, int*)	 зашли в первый ифsource/input_or_output.cpp:14	 size_t read_number(size_t, double*, FILE*, int*)	while begin, 4source/input_or_output.cpp:23	 size_t read_number(size_t, double*, FILE*, int*)	JEEEST 1, -4.000000source/input_or_output.cpp:24	 size_t read_number(size_t, double*, FILE*, int*)	fscanf,  box_for_scanf -4.000000
+source/input_or_output.cpp:105	 int clear_buff_input(int*, FILE*)	begin while 1
+source/input_or_output.cpp:117	 int clear_buff_input(int*, FILE*)	symb getc,  source/input_or_output.cpp:133	 int clear_buff_input(int*, FILE*)	end while 1
+source/input_or_output.cpp:137	 int clear_buff_input(int*, FILE*)	end while 2
+source/input_or_output.cpp:31	 size_t read_number(size_t, double*, FILE*, int*)	 зашли в первый ифsource/input_or_output.cpp:14	 size_t read_number(size_t, double*, FILE*, int*)	while begin, 5source/input_or_output.cpp:23	 size_t read_number(size_t, double*, FILE*, int*)	JEEEST 1, 0.000000source/input_or_output.cpp:24	 size_t read_number(size_t, double*, FILE*, int*)	fscanf,  box_for_scanf 0.000000
+source/input_or_output.cpp:105	 int clear_buff_input(int*, FILE*)	begin while 1
+source/input_or_output.cpp:117	 int clear_buff_input(int*, FILE*)	symb getc,  source/input_or_output.cpp:133	 int clear_buff_input(int*, FILE*)	end while 1
+source/input_or_output.cpp:137	 int clear_buff_input(int*, FILE*)	end while 2
+source/input_or_output.cpp:31	 size_t read_number(size_t, double*, FILE*, int*)	 зашли в первый ифsource/test.cpp:85	 int fill_test_data_from_file(Test_data*)	test_do_while 1, 1source/test.cpp:90	 int fill_test_data_from_file(Test_data*)	test_do_while 2, 1, "3"source/test.cpp:81	 int fill_test_data_from_file(Test_data*)	while step 3 begin
+source/input_or_output.cpp:14	 size_t read_number(size_t, double*, FILE*, int*)	while begin, 0source/input_or_output.cpp:23	 size_t read_number(size_t, double*, FILE*, int*)	JEEEST 0, 1.#QNAN0source/input_or_output.cpp:24	 size_t read_number(size_t, double*, FILE*, int*)	fscanf,  box_for_scanf 1.#QNAN0
+source/input_or_output.cpp:152	 bool check_about_NAN_and_INF(double*, int*, FILE*)	 res 1
+ str grfd 
+source/input_or_output.cpp:14	 size_t read_number(size_t, double*, FILE*, int*)	while begin, 0source/input_or_output.cpp:23	 size_t read_number(size_t, double*, FILE*, int*)	JEEEST -1, 1.#QNAN0source/input_or_output.cpp:24	 size_t read_number(size_t, double*, FILE*, int*)	fscanf,  box_for_scanf 1.#QNAN0
+source/test.cpp:85	 int fill_test_data_from_file(Test_data*)	test_do_while 1, 1source/test.cpp:90	 int fill_test_data_from_file(Test_data*)	test_do_while 2, -1, "3"source/test.cpp:114	 int fill_test_data_from_file(Test_data*)	fill_test_data_with_fill end
+source/test.cpp:149	 void full_test_for_solve_equ()	INPUT_TEST_MODE define
+source/quad_equ.cpp:161	 CODE_ERRORS gen_struct(double*, quad*)	 begin
+source/quad_equ.cpp:173	 CODE_ERRORS gen_struct(double*, quad*)	 end
+source/quad_equ.cpp:24	 CODE_ERRORS solve_equations(quad*)	Определяем степень уравнения
+ ewecwce 0, 0 
+source/quad_equ.cpp:38	 CODE_ERRORS solve_equations(quad*)	Степень 2
+source/quad_equ.cpp:92	 CODE_ERRORS find_roots_quad_equ(quad*)	 begin
+source/quad_equ.cpp:117	 CODE_ERRORS find_roots_quad_equ(quad*)	 begin
+source/quad_equ.cpp:45	 CODE_ERRORS solve_equations(quad*)	Определили степень
+source/quad_equ.cpp:46	 CODE_ERRORS solve_equations(quad*)	asserts 0, 1
+тест 1  завершен успешно
+source/quad_equ.cpp:161	 CODE_ERRORS gen_struct(double*, quad*)	 begin
+source/quad_equ.cpp:173	 CODE_ERRORS gen_struct(double*, quad*)	 end
+source/quad_equ.cpp:24	 CODE_ERRORS solve_equations(quad*)	Определяем степень уравнения
+ ewecwce 1, 1 
+source/quad_equ.cpp:30	 CODE_ERRORS solve_equations(quad*)	Степень 1
+source/quad_equ.cpp:55	 CODE_ERRORS find_roots_lin_equ(quad*)	 begin
+source/quad_equ.cpp:82	 CODE_ERRORS find_roots_lin_equ(quad*)	 end
+source/quad_equ.cpp:45	 CODE_ERRORS solve_equations(quad*)	Определили степень
+source/quad_equ.cpp:46	 CODE_ERRORS solve_equations(quad*)	asserts -1, 1
+тест 2  завершен успешно
+source/quad_equ.cpp:161	 CODE_ERRORS gen_struct(double*, quad*)	 begin
+source/quad_equ.cpp:173	 CODE_ERRORS gen_struct(double*, quad*)	 end
+source/quad_equ.cpp:24	 CODE_ERRORS solve_equations(quad*)	Определяем степень уравнения
+ ewecwce 0, 0 
+source/quad_equ.cpp:38	 CODE_ERRORS solve_equations(quad*)	Степень 2
+source/quad_equ.cpp:92	 CODE_ERRORS find_roots_quad_equ(quad*)	 begin
+source/quad_equ.cpp:117	 CODE_ERRORS find_roots_quad_equ(quad*)	 begin
+source/quad_equ.cpp:45	 CODE_ERRORS solve_equations(quad*)	Определили степень
+source/quad_equ.cpp:46	 CODE_ERRORS solve_equations(quad*)	asserts 2, 1
+тест 3  завершен успешно
+source/test.cpp:177	 void full_test_for_solve_equ()	full_test_for_solve_equ end

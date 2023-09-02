@@ -10,8 +10,6 @@ const int MAX_SIZE_ARRAY_OF_TEST = 100;
 int INPUT_TEST_MODE = 0;
 int TEST_MODE=0;
 
-//Тесты и время
-
 
 bool test_for_one_quad_equ(struct quad *equ, double roots[])
 {
@@ -119,7 +117,7 @@ int fill_test_data_from_file(struct Test_data all_data[])
 }
 
 
-int fill_test_data_with_code(struct Test_data all_data)
+int fill_test_data_with_code(struct Test_data all_data[])
 {
     LOG(DEBUG>=MIN_DEBUG, stream_out, "fill_test_data_with_code begin\n");
 
@@ -154,7 +152,7 @@ void full_test_for_solve_equ()
     {
         struct quad equ_test = {};
 
-        gen_struktur(all_data[i].coef, &equ_test);
+        gen_struct(all_data[i].coef, &equ_test);
         bool test_res = test_for_one_quad_equ(&equ_test, all_data[i].roots);
 
         if (test_res)

@@ -55,6 +55,7 @@ int main(const int argc, const char* argv[])
 
         print_info_about_roots(&equ);
     }
+
     close_file_for_debug();
 }
 

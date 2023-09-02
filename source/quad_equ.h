@@ -31,7 +31,7 @@ initializes all values in quadratic equ. from #coef init coefficent and other va
     @param[in] coef #coef there is value of quadratic equ coefficent
     @param[in] equ. Pointer to quadratic equ which must be fill this function
 */
-enum CODE_ERRORS gen_struktur(double coef[DEGREE+1], struct quad *equ);
+enum CODE_ERRORS gen_struct(double coef[DEGREE+1], struct quad *equ);
 /*!
 Finds solutions for the square equation passed
 

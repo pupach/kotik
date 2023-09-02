@@ -21,12 +21,18 @@ void open_file_for_debug_log()
 
             stream_out = fopen(OUTPUT_FILE, "w");
         }
-        stream_out = fopen(OUTPUT_FILE, "a");
+        else
+        {
+            stream_out = fopen(OUTPUT_FILE, "a");
+        }
     }
-    stream_out = stdout;
+    else
+    {
+        stream_out = stdout;
+    }
 }
 
-void close_file_for_debuf()
+void close_file_for_debug()
 {
     if (!((stream_out == stdout) or (stream_out == stderr)))
     {
@@ -36,5 +42,5 @@ void close_file_for_debuf()
 #endif
 #ifndef DEBUG_MODE
 void open_file_for_debug_log(){}
-void close_file_for_debuf(){}
+void close_file_for_debug(){}
 #endif

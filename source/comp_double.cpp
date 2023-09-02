@@ -9,7 +9,7 @@ int comp_double_for_qsort(const void *first, const void *second)
     return compare_double((const double *)first, (const double *)second);
 }
 
-enum return_comp_doub compare_double(const double *first, const double *second) //TODO без указателей
+enum RETURN_COMP_DOUB compare_double(const double *first, const double *second)
 {
         is_bad_ptr(first);
         is_bad_ptr(second);
@@ -22,20 +22,20 @@ enum return_comp_doub compare_double(const double *first, const double *second) 
             (isnan(first_v) && isnan(second_v)) ||
             (fabs((first_v)-(second_v)) < EPSILON))
         {
-            return equality;
+            return EQUALITY;
         }
         else if(first_v>(second_v)+EPSILON)
         {
-            return fir_big_than_sec;
+            return FIR_BIG_THAN_SEC;
         }
         else
         {
-            return fir_less_than_sec;
+            return FIR_LESS_THAN_SEC;
         }
         return BAD_RETURN_D;
 }
 
-enum return_comp_doub is_double_zero(const double *first)
+enum RETURN_COMP_DOUB comp_double_and_zero(const double *first)
 {
     return compare_double(first, &for_compare_double);
 }
